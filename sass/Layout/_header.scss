@@ -1,0 +1,19 @@
+.header__title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header__localisation{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: #eaeaea;
+    &--icon{
+        display: inline-block;
+    }
+        &--text{
+        display:inline-block;
+        padding-left: 10px;
+    }
+}

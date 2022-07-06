@@ -1,11 +1,144 @@
-* {
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+.header__localisation--text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header__title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.header__localisation {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+.header__localisation--icon {
+  display: inline-block;
+}
+.header__localisation--text {
+  display: inline-block;
+  padding-left: 10px;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+.explore {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.explore__title {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.explore__text {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.functioning {
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+.functioning__text {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.functioning__button {
+  text-align: center;
+}
+
+.explore__button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

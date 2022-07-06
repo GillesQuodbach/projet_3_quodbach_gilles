@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    margin: auto;
+}
+// Partie réservation
+.explore{
+    background-color: #f6f6f6;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+    &__title{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    &__text{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+}
+
+.functioning{
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    &__text{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    &__button{
+        text-align: center;
+    }
+}
+

@@ -1,7 +1,34 @@
-// h1 {
-//     font-family: 'Shrikhand', cursive;
-// }
 
-body{
+// Tout le texte en roboto
+*{
     font-family: 'Roboto', sans-serif;
+}
+// Mise en forme des liens
+a {
+    text-decoration: none;
+}
+
+// Titre h1
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 35px;
+}
+// Titre h2
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+// Titre h3
+h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
+// Titre h4
+h4 {
+    font-family: 'Shrikhand', cursive;
+}
+// Texte de la localisation
+.header__localisation--text{
+    font-size: 16px;
+    font-weight: 700;
 }
