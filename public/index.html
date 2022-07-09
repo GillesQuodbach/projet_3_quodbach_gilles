@@ -1,92 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b556c70381.js" crossorigin="anonymous"></script>
-    <meta name="descritpion" content="Avec OhMyFood, n'attendez plus au restaurant, commandez ,votre menu en ligne.">
+    <meta name="description" content="Avec OhMyFood, n'attendez plus au restaurant, commandez ,votre menu en ligne.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link href="/public/styles/normalize.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/public/styles/style.css" />
     <title>OhMyFood</title>
 </head>
+
 <body>
     <!-- Header du site -->
     <header>
         <h1 class="header__title">ohmyfood</h1>
         <div class="header__localisation">
-            <i class="fa-solid fa-location-dot header--icon"></i>
+            <i class="fa-solid fa-location-dot header__icon"></i>
             <p class="header__localisation--text">Paris, Belleville</p>
         </div>
     </header>
     <!-- Partie Main -->
-    <main>
+    <section>
         <!-- Partie home -->
-        <div class="explore">
+        <article class="explore">
             <h2 class="explore__title">Réservez le menu qui vous convient</h2>
             <h3 class="explore__text">Découvrez des restaurant d'exception, séléctionnés par nos soins.</h3>
-            <button class="explore__button">Explorer nos restaurants</button>
-        </div>
+            <button class="explore__btn">Explorer nos restaurants</button>
+        </article>
         <!-- Partie fonctionnement -->
-        <div class="functioning">
-            <h2 class="functioning__text">Fonctionnement</h2>
-            <button class="functioning__button functioning__boutton1">Choississez un restaurant</button>
-            <button class="functioning__button functioning__button2 boutton2">Choississez votre menu</button>
-            <button class="functioning__button functioning__button3">Dégustez au restaurant</button>
-        </div>
+        <article class="functioning">
+            <h2 class="functioning__title">Fonctionnement</h2>
+            <button class="functioning__btn functioning__btn1">
+                <span class="functioning__number">1</span>
+                <i class="fa-solid fa-mobile-screen-button functioning__icon"></i>
+                Choississez un restaurant
+            </button>
+            <button class="functioning__btn functioning__btn2 btn2">
+                <span class="functioning__number">2</span>
+                <i class="fa-solid fa-list functioning__icon"></i>
+                Composez votre menu
+            </button>
+            <button class="functioning__btn functioning__btn3">
+                <span class="functioning__number">3</span>
+                <i class="fa-solid fa-store functioning__icon"></i>
+                Dégustez au restaurant
+            </button>
+        </article>
         <!-- Partie restaurants -->
-        <h2>Restaurants</h2>
         <!-- Cards des restaurants -->
-        <div class="restaurants">
+        <!-- ajouter href -->
+        <section class="restaurants">
+            <h2 class="restaurants__title">Restaurants</h2>
             <!-- Card1 -->
+            <a href="menus/menu1.html">
             <figure class="restaurants__cards">
-                <img src="/public/images/restaurants/la_palette_du_gout.jpg">
-                <figcaption>
-                    <i class="fa-solid fa-heart"></i>
+                <img src="/public/images/restaurants/la_palette_du_gout.jpg" class="restaurants__cards__images">
+                <figcaption class="restaurants__cards__figcaption">
+                    <p class="restaurants__cards__figcaption__title">La palette du goût</p>
+                    <p class="restaurants__cards__figcaption__place">Ménilemontant</p>
+                    <i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i>
                 </figcaption>
-            <!-- Card2 -->
+                <!-- Card2 -->
             </figure>
+            </a>
+            <a href="menus/menu2.html">
             <figure class="restaurants__cards">
-                <img src="/public/images/restaurants/la_note_enchantee.jpg">
-                <figcaption>
-                    <i class="fa-solid fa-heart"></i>
+                <img src="/public/images/restaurants/la_note_enchantee.jpg" class="restaurants__cards__images">
+                <figcaption class="restaurants__cards__figcaption">
+                    <p class="restaurants__cards__figcaption__title">La note enchantée</p>
+                    <p class="restaurants__cards__figcaption__place">Charonne</p>
+                    <i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i>
                 </figcaption>
             </figure>
+            </a>
             <!-- Card3 -->
+            <a href="menus/menu3.html">
             <figure class="restaurants__cards">
-                <img src="/public/images/restaurants/a_la_francaise.jpg">
-                <figcaption>
-                    <i class="fa-solid fa-heart"></i>
+                <img src="/public/images/restaurants/a_la_francaise.jpg" class="restaurants__cards__images">
+                <figcaption class="restaurants__cards__figcaption">
+                    <p class="restaurants__cards__figcaption__title">A la française</p>
+                    <p class="restaurants__cards__figcaption__place">Cité Rouge</p>
+                    <i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i>
                 </figcaption>
             </figure>
+            </a>
             <!-- Card4 -->
+            <a href="menus/menu4.html">
             <figure class="restaurants__cards">
-                <img src="/public/images/restaurants/le_delice_des_sens.jpg">
-                <figcaption>
-                    <i class="fa-solid fa-heart"></i>
+                <img src="/public/images/restaurants/le_delice_des_sens.jpg" class="restaurants__cards__images">
+                <figcaption class="restaurants__cards__figcaption">
+                    <p class="restaurants__cards__figcaption__title">Le délice des sens</p>
+                    <p class="restaurants__cards__figcaption__place">Folie-Méricourt</p>
+                    <i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i>
                 </figcaption>
             </figure>
-        </div>
-    </main>
-    <footer>
-        <h4 class="footer_title">ohmyfood</h4>
-        <ul>
-            <li>
-                <i class="fa-solid fa-utensils"></i>
-                <p>Proposer un restaurant</p>
-            </li>
-            <li>
-                <i class="fa-solid fa-handshake-angle"></i>
-                <p>Devenir partenaire</p>
-            </li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
-        </ul>
-    </footer>
-
-    
+            </a>
+        </section>
+        </main>
+        <footer class="footer">
+            <h4 class="footer__title">ohmyfood</h4>
+            <h5 class="footer__text"><i class="fa-solid fa-utensils footer__icons"></i>&nbsp;&nbsp;Proposer un
+                restaurant</h5>
+            <h5 class="footer__text"><i class="fa-solid fa-handshake-angle footer__icons"></i>&nbsp;&nbsp;Devenir
+                partenaire</h5>
+            <h5 class="footer__text">Mentions légales</h5>
+            <h5 class="footer__text">Contact</h5>
+            </ul>
+        </footer>
 </body>
+
 </html>
