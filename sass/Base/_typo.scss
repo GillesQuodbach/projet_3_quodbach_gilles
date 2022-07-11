@@ -1,46 +1,70 @@
-
 // Tout le texte en roboto
 *{
     font-family: 'Roboto', sans-serif;
 }
+// !PARTIE ACCUEIL
+// ?TYPO HEADER
+// Titre h1
+.header-h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 30px;
+}
+// Titre partie explore
+.explore{
+    &__h2{
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+    &__h3{
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+// Titre FONCTIONNEMENT
+.functioning{
+    &__h2{
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+// Titre RESTAURANTS
+.restaurants{
+    &__h2{
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+}
+// !PARTIE MENU
+// Titre restaurant
+.menu-complete-h2{
+    color: red;
+}
+
+// !TYPO FOOTER
+// Titre du FOOTER
+.footer-h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.footer-h5{
+    font-size: 12px;
+    margin: 3px;
+}
+
+
 // Mise en forme des liens
 a {
     text-decoration: none;
 }
-
-// Titre h1
-h1 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 35px;
-}
-// Titre h2
-h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-// Titre h3
-h3 {
-    font-size: 16px;
-    font-weight: 300;
-}
-// Titre du FOOTER
-h4 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-//Text FOOTER
-h5{
-    font-size: 10px;
-    margin-bottom: 5px;
+a:visited{
+    color: black;
 }
 
-// Titre MENU
-h6{
-    font-size: 14px;
-}
-// Texte de la localisation
-.header__localisation--text{
-    font-size: 16px;
-    font-weight: 700;
-}

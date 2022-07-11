@@ -1,14 +1,11 @@
+@import "./Base/normalize.scss";
 @import "./Utils/variables.scss";
 @import "./Utils/mixins.scss";
-@import "./Base/reset.scss";
 @import "./Base/typo.scss";
 @import "./Layout/header.scss";
-@import "./Layout/menu.scss";
 @import "./Layout/footer.scss";
 @import "./Pages/home.scss";
-@import "./Pages/menu1.scss";
-@import "./Pages/menu2.scss";
-@import "./Pages/menu3.scss";
-@import "./Pages/menu4.scss";
+@import "./Pages/menu.scss";
 @import "./Components/btn.scss";
 @import "./Components/cards.scss";
+@import "./Components/header-menu.scss";

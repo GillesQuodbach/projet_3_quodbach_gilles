@@ -1,49 +1,52 @@
+
+.restaurants-link{
+    margin: 0;
+}
 .restaurants{
-    max-height: 1230px;
+    // max-height: 1230px;
+    margin-bottom: 40px;
     &__cards{
         min-width: 280px;
-        height: 280px;
+        height: 215px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         border-radius: $radius-figure;
-        margin-bottom: 10px;
+        margin: 0;
         
         &__images{
             margin: 0;
-            // min-height: 200px;
-            max-height: 200px;
+            min-height: 150px;
+            max-height: 150px;
             object-fit: cover;
-            // enlève l'espace entre figure et figcaption
-            vertical-align: middle;   
+            // enlève l'espace entre figure et figcaption   
         }  
         &__figcaption{
             text-align: left;
-            width: 100%;
             height: 60px;
             border-radius: $radius-figcaption;
             box-shadow: $shadows;
-            padding-top: 10px;
-            padding-bottom: 10px;
             padding-left: 15px;
             padding-right: 15px;
-            &__title{
-                font-size: 15px;
-                font-weight: 600;
+        }
+        &__figcaption-title{
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 0px;
             }
-            &__place{
-                padding-top: 3px;
+        &__figcaption-place{
+                margin-top: 5px;
                 font-size: 13px;
             }
-            &__heart{
+        &__figcaption-heart{
                 font-size: 20px;
                 color: grey;
                 display: block;
                 text-align: right;
                 position: relative;
-                bottom: 35px;
+                bottom: 45px;
             }
             
         }  
     }
-}
