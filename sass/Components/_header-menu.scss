@@ -1,15 +1,18 @@
-.menu-page-header{
+.header-menu{
         padding-left: 20px;
         padding-right: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
+        margin: 0;
+        background-color: white;
         &__h1{
             font-size: 26px;
             text-align: center;
             font-family: 'Shrikhand', cursive;
+            margin: 0;
         }
         &__arrow{
             position: relative;
-            right: 110px;
+            right: 130px;
             top: 25px;
             font-size: 18px;
         }

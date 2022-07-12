@@ -340,14 +340,28 @@ template {
   font-weight: 700;
 }
 
-.menu-complete-h2 {
-  color: red;
+.restaurant-title__text {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Shrikhand", cursive;
+}
+.restaurant-title__heart {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.menu-complete-part-title {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .footer-h4 {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: 400;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -385,7 +399,7 @@ header {
 footer {
   background-color: #353535;
   color: white;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 20px;
   padding-bottom: 10px;
 }
@@ -453,49 +467,54 @@ body {
   gap: 10px;
 }
 
-.menu-page__part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 .menu-page {
   width: 100%;
 }
-.menu-page__complete {
-  background-color: #f6f6f6;
-  border-radius: 10px 10px 0px 0px;
+
+.menu-page-restaurant {
+  width: 100%;
+  height: 180px;
+  position: relative;
 }
-.menu-page__part {
-  margin-bottom: 20px;
+.menu-page-restaurant__image {
+  position: absolute;
+  max-width: 100%;
+  z-index: -1;
 }
 
 .menu-complete {
-  padding: 10px;
-}
-.menu-complete__title {
-  font-size: 30px;
+  text-align: center;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
 
-.menu-complete-title {
+.restaurant-title {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
-.trouducul {
-  color: green;
-}
-
-.menu-page__restaurant {
+.menu-complete-part {
+  text-align: center;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
+
+.menu-complete-part-title {
+  text-align: left;
+}
+
+.image-la_note_enchantee {
+  top: -70px;
+  overflow: hidden;
+}
+
 .explore__btn {
-  width: 200px;
+  width: 63%;
   height: 50px;
   border-radius: 25px;
   font-size: 14px;
@@ -520,33 +539,42 @@ body {
   margin-right: 15px;
 }
 
-.menu-complete-part__btn {
-  padding: 10px;
-  width: 300px;
-  height: 50px;
+.btn-menu-complete-part {
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 2px 5px rgb(218, 213, 213);
+  width: 100%;
+  min-height: 40px;
   border: none;
-  display: flex;
-  flex-direction: column;
-}
-.menu-complete-part__btn__food-title {
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgb(218, 213, 213);
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  margin-bottom: 15px;
   text-align: left;
+}
+.btn-menu-complete-part__food-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  padding-right: 60px;
+}
+.btn-menu-complete-part__food-complement {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+.btn-menu-complete-part__food-price {
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   font-weight: 600;
-}
-.menu-complete-part__btn__food-complement {
-  padding-top: 5px;
-  font-size: 12px;
-}
-.menu-complete-part__btn__food-price {
-  font-size: 12px;
-  font-weight: 600;
-  margin-left: auto;
+  text-align: right;
   position: relative;
-  bottom: 13px;
-  right: 10px;
+  right: 15px;
+  bottom: 15px;
 }
 
 .restaurants-link {
@@ -598,19 +626,22 @@ body {
   bottom: 45px;
 }
 
-.menu-page-header {
+.header-menu {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  margin: 0;
+  background-color: white;
 }
-.menu-page-header__h1 {
+.header-menu__h1 {
   font-size: 26px;
   text-align: center;
   font-family: "Shrikhand", cursive;
+  margin: 0;
 }
-.menu-page-header__arrow {
+.header-menu__arrow {
   position: relative;
-  right: 110px;
+  right: 130px;
   top: 25px;
   font-size: 18px;
 }

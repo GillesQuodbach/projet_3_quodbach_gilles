@@ -18,81 +18,90 @@
 </head>
 <body>
     <!-- Header du site -->
-    <header class="menu">
-        <i class="fa-solid fa-arrow-left menu__header-arrow"></i>
-        <h1 class="header__title">ohmyfood</h1>
+    <header class="header-menu">
+        <i class="fa-solid fa-arrow-left header-menu__arrow"></i>
+        <h1 class="header-menu__h1">ohmyfood</h1>
     </header>
-<main class="menu">
-    <div class="menu1_restaurants">
-        <img class="menu1_restaurants_img" src="\public\images\restaurants\la_note_enchantee.jpg">
+<main class="menu-page">
+    <div class="menu-page-restaurant">
+        <img class="menu-page-restaurant__image image-la_note_enchantee"src="/public/images/restaurants/la_note_enchantee.jpg" alt="Restaurant La note enchantée">
     </div>
-    <section class="menu__complete">
-        <div class="menu__title__box">
-        <h1 class="menu__title>">La note enchantée</h1>
-        <i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i>
+    <section class="menu-complete">
+        <div class="restaurant-title">
+            <p class="restaurant-title__text">La note enchantée</p>
+            <p class="restaurant-title__heart"><i class="fa-regular fa-heart restaurants__cards__figcaption__heart"></i></p>
         </div>
-        <div class="menu__part">
-            <h6>ENTREES</h6>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Ravioles de foie gras</p>
-                <p class="menu__btn__food-complement">Accompagnés de leur crème à la truffe<span class="menu__btn__food-price">25€</span></p>
+        <div class="menu-complete-part">
+            <h2 class="menu-complete-part-title" >ENTREES</h2>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Ravioles de foie gras</p>
+                <p class="btn-menu-complete-part__food-complement">Accompagnés de leur crème à la truffe</p>
+                <p class="btn-menu-complete-part__food-price">25€</p>
             </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Caviar osciètre</p>
-                <p class="menu__btn__food-complement">Sur blini à la farine de blé noir<span class="menu__btn__food-price">20€</span></p>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Caviar osciètre
+                <p class="btn-menu-complete-part__food-complement">Sur blini à la farine de blé noir</p>
+                <p class="btn-menu-complete-part__food-price">35€</p>
             </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Homard et espuma de...</p>
-                <p class="menu__btn__food-complement">Mariné aux zest d'orange<span class="menu__btn__food-price">20€</span></p>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Homard et espuma de...</p>
+                <p class="btn-menu-complete-part__food-complement">Mariné aux zest d'orange</p>
+                <p class="btn-menu-complete-part__food-price">20€</p>
             </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Foie gras de canard cuit entier</p>
-                <p class="menu__btn__food-complement">Confiture de figue et pain toasté<span class="menu__btn__food-price">35€</span></p>
-            </button>
-        </div>
-        <div class="menu__part">
-            <h6>PLATS</h6>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Noix de coquilles Saint-Jacques</p>
-                <p class="menu__btn__food-complement">Sur lit de purée de céleri-rave<span class="menu__btn__food-price">40€</span></p>
-            </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Parmentier de queue de boeuf</p>
-                <p class="menu__btn__food-complement">Langoustine poêlée<span class="menu__btn__food-price">35€</span></p>
-            </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Mijoté de queue de boeuf</p>
-                <p class="menu__btn__food-complement">Et riz sauvage aux zests de citron<span class="menu__btn__food-price">44€</span></p>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Foie gras de canard cuit entier</p>
+                <p class="btn-menu-complete-part__food-complement">Confiture de figue et pain toasté</p>
+                <p class="btn-menu-complete-part__food-price">35€</p>
             </button>
         </div>
-        <div class="menu__part">
-            <h6>DESSERTS</h6>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Macaron noisette et chocolat</p>
-                <p class="menu__btn__food-complement">Glace au caramel brun et sel de Guérande<span class="menu__btn__food-price">18€</span></p>
+        <div class="menu-complete-part">
+            <h2 class="menu-complete-part-title">PLATS</h2>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Noix de coquilles Saint-Jacques</p>
+                <p class="btn-menu-complete-part__food-complement">Sur lit de purée de céleri-rave</p>
+                <p class="btn-menu-complete-part__food-price">40€</p>
             </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Baba au rhum revisté</p>
-                <p class="menu__btn__food-complement">Avec sont coulis de citron<span class="menu__btn__food-price">22€</span></p>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Langoustine poêlée</p>
+                <p class="btn-menu-complete-part__food-complement">Purée de patate douce</p>
+                <p class="btn-menu-complete-part__food-price">35€</p>
             </button>
-            <button class="menu__btn">
-                <p class="menu__btn__food-title">Tarte au citron meringuée</p>
-                <p class="menu__btn__food-complement">Destructurée<span class="menu__btn__food-price">23€</span></p>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Mijoté de queue de boeuf</p>
+                <p class="btn-menu-complete-part__food-complement">Et riz sauvage aux zests de citron</p>
+                <p class="btn-menu-complete-part__food-price">44€</p>
+            </button>
+        </div>
+        <div class="menu-complete-part">
+            <h2 class="menu-complete-part-title">DESSERTS</h2>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Macaron noisette et chocolat</p>
+                <p class="btn-menu-complete-part__food-complement">Glace au caramel brun et sel de Guérande</p>
+                <p class="btn-menu-complete-part__food-price">18€</p>
+            </button>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Baba au rhum revisité</p>
+                <p class="btn-menu-complete-part__food-complement">Avec son coulis de citron</p>
+                <p class="btn-menu-complete-part__food-price">22€</p>
+            </button>
+            <button class="btn-menu-complete-part">
+                <p class="btn-menu-complete-part__food-title">Tarte au citron meringuée</p>
+                <p class="btn-menu-complete-part__food-complement">Destructurée</p>
+                <p class="btn-menu-complete-part__food-price">23€</p>
             </button>
         </div>
         </div>
         <button class="explore__btn">Commander</button>
     </section>
 </main>
-<footer class="footer">
-    <h4 class="footer__title">ohmyfood</h4>
-    <h5 class="footer__text"><i class="fa-solid fa-utensils footer__icons"></i>&nbsp;&nbsp;Proposer un
+<footer>
+    <h4 class="footer-h4">ohmyfood</h4>
+    <h5 class="footer-h5"><i class="fa-solid fa-utensils footer__icons"></i>&nbsp;&nbsp;Proposer un
         restaurant</h5>
-    <h5 class="footer__text"><i class="fa-solid fa-handshake-angle footer__icons"></i>&nbsp;&nbsp;Devenir
+    <h5 class="footer-h5"><i class="fa-solid fa-handshake-angle footer-h5"></i>&nbsp;&nbsp;Devenir
         partenaire</h5>
-    <h5 class="footer__text">Mentions légales</h5>
-    <h5 class="footer__text">Contact</h5>
-    </ul>
+    <h5 class="footer-h5">Mentions légales</h5>
+    <h5 class="footer-h5">Contact</h5>
 </footer>
 </body>
 
