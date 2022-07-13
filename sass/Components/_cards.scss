@@ -1,11 +1,21 @@
 
 .restaurants-link{
+    position: relative;
+    top: -20px;
+    height: 200px;
     margin: 0;
+    text-decoration: none;
+    &:visited{
+        color: black;
+}
 }
 .restaurants{
-    // max-height: 1230px;
+    background-color: #f6f6f6;
     margin-bottom: 40px;
     &__cards{
+        z-index: 0;
+        display: block;
+        color: black;
         min-width: 280px;
         height: 215px;
         overflow: hidden;
@@ -13,31 +23,72 @@
         flex-direction: column;
         border-radius: $radius-figure;
         margin: 0;
+        @include mobile-m-only{
+            height: 225px;
+        }
+        @include mobile-l-only{
+            height: 235px;
+        }
         
         &__images{
+            z-index: 0;
+            display: block;
+            position: relative;
+            top: -45px;
+            overflow: hidden;
             margin: 0;
-            min-height: 150px;
-            max-height: 150px;
+            min-height: 190px;
+            max-height: 190px;
             object-fit: cover;
+            @include mobile-m-only{
+                min-height: 205px;
+                max-height: 205px;
+            }
+            @include mobile-l-only{
+                min-height: 215px;
+                max-height: 215px;
+            }
             // enlève l'espace entre figure et figcaption   
         }  
         &__figcaption{
+            z-index: 1;
+            position: relative;
+            top: -45px;
+            display: block;
             text-align: left;
             height: 60px;
             border-radius: $radius-figcaption;
             box-shadow: $shadows;
             padding-left: 15px;
             padding-right: 15px;
+            @include mobile-m-only{
+                height: 65px;
+            }
+            @include mobile-l-only{
+                height: 70px;
+            }
         }
         &__figcaption-title{
             margin-top: 10px;
             font-size: 15px;
             font-weight: 600;
             margin-bottom: 0px;
+            @include mobile-m-only{
+                font-size: 17px;
+            }
+            @include mobile-l-only{
+                font-size: 19px;
+            }
             }
         &__figcaption-place{
                 margin-top: 5px;
                 font-size: 13px;
+                @include mobile-m-only{
+                    font-size: 15px;
+                }
+                @include mobile-l-only{
+                    font-size: 17px;
+                }
             }
         &__figcaption-heart{
                 font-size: 20px;
@@ -46,6 +97,14 @@
                 text-align: right;
                 position: relative;
                 bottom: 45px;
+                @include mobile-m-only{
+                    font-size: 22px;
+                    bottom: 50px;
+                }
+                @include mobile-l-only{
+                    font-size: 24px;
+                    bottom: 55px;
+                }
             }
             
         }  

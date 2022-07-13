@@ -1,9 +1,29 @@
 footer{
     background-color: #353535;
     color: white;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-left: 20px;  
     padding-bottom: 10px;   
     }
+
+// Mise en forme des liens
+a {
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+
+.footer-contact {
+    color: white;
+    text-decoration: none;
+    &:visited{
+        color: white;
+        
+    }
+}
+
+
+
 
 

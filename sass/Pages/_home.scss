@@ -33,25 +33,10 @@ body {
         margin-left: -9px;
         margin-bottom: 20px;
     }
-    &__btn{
-        text-align: left;
-    }
-    &__number{
-        display: inline-block;
-        position:relative;
-        right: 15px;
-        border: 1px solid black;
-        width: 18px;
-        height: 18px;
-        line-height: 19px;
-        border-radius: 50%;
-        text-align: center;
-        background-color: $colour-primary;
-        color: white;
-        border: none;
-    }
+    
 }
 .restaurants{
+    
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -60,5 +45,16 @@ body {
     justify-content: space-evenly;
     gap: 10px;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+    &:visited{
+        color: black;
+    }
+}
+
+
+
 
 

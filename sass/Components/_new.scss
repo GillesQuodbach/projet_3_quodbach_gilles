@@ -1,0 +1,21 @@
+.new-restaurant-text{
+    color: $colour-font-new;
+    font-size: 12px;
+    z-index: 1;
+    display: inline-block;
+    background-color: $colour-bcg-new;
+    margin: 0;
+    padding: 5px;
+    border-radius: 2px;
+    position: relative;
+    top: 40px;
+    left: 100px;
+    @include mobile-m-only{
+        font-size: 14px;
+        left: 120px;
+    }
+    @include mobile-l-only{
+        font-size: 16px;
+        left: 140px;
+    }
+}

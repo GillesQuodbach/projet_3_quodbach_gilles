@@ -5,16 +5,30 @@
         margin: 0;
         background-color: white;
         &__h1{
-            font-size: 26px;
+            font-size: 30px;
+            font-weight: 500px;
             text-align: center;
             font-family: 'Shrikhand', cursive;
             margin: 0;
+            @include mobile-m-only{
+                font-size: 32px;
+            }
         }
         &__arrow{
             position: relative;
             right: 130px;
-            top: 25px;
-            font-size: 18px;
+            top: 30px;
+            font-size: 22px;
+            @include mobile-m-only{
+                font-size: 24px;
+                top: 30px;
+                right: 150px;
+            }
+            @include mobile-l-only{
+                font-size: 26px;
+                top: 30px;
+                right: 160px;
+            }
         }
     }
 

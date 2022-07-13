@@ -9,9 +9,23 @@ header{
     background-color: #eaeaea;
     &__icon{
         display: inline-block;
+        font-size: 16px;
+        @include mobile-m-only{
+            font-size: 18px;
+        }
+        @include mobile-l-only{
+            font-size: 22px;
+        }
     }
     &__place{
         display:inline-block;
         padding-left: 10px;
+        font-size: 16px;
+        @include mobile-m-only{
+            font-size: 18px;
+        }
+        @include mobile-l-only{
+            font-size: 18px;
+        }
     }
 }

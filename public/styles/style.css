@@ -314,6 +314,18 @@ template {
 .header-h1 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
+  font-weight: 500;
+  margin: 10px;
+}
+@media screen and (min-width: 375px) {
+  .header-h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .header-h1 {
+    font-size: 34px;
+  }
 }
 
 .explore__h2 {
@@ -322,22 +334,63 @@ template {
   padding-left: 30px;
   padding-right: 30px;
 }
+@media screen and (min-width: 375px) {
+  .explore__h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .explore__h2 {
+    font-size: 32px;
+  }
+}
 .explore__h3 {
   font-size: 16px;
   font-weight: 300;
 }
+@media screen and (min-width: 375px) {
+  .explore__h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .explore__h3 {
+    font-size: 20px;
+  }
+}
 
 .functioning__h2 {
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 375px) {
+  .functioning__h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .functioning__h2 {
+    font-size: 26px;
+  }
 }
 
 .restaurants__h2 {
   text-align: left;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 375px) {
+  .restaurants__h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__h2 {
+    font-size: 26px;
+  }
 }
 
 .restaurant-title__text {
@@ -345,9 +398,29 @@ template {
   font-size: 24px;
   font-family: "Shrikhand", cursive;
 }
+@media screen and (min-width: 375px) {
+  .restaurant-title__text {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurant-title__text {
+    font-size: 28px;
+  }
+}
 .restaurant-title__heart {
   font-size: 24px;
   margin-right: 15px;
+}
+@media screen and (min-width: 375px) {
+  .restaurant-title__heart {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurant-title__heart {
+    font-size: 28px;
+  }
 }
 
 .menu-complete-part-title {
@@ -355,6 +428,16 @@ template {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 375px) {
+  .menu-complete-part-title {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .menu-complete-part-title {
+    font-size: 19px;
+  }
 }
 
 .footer-h4 {
@@ -364,18 +447,30 @@ template {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 375px) {
+  .footer-h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .footer-h4 {
+    font-size: 22px;
+  }
+}
 
 .footer-h5 {
   font-size: 12px;
   margin: 3px;
 }
-
-a {
-  text-decoration: none;
+@media screen and (min-width: 375px) {
+  .footer-h5 {
+    font-size: 14px;
+  }
 }
-
-a:visited {
-  color: black;
+@media screen and (min-width: 375px) {
+  .footer-h5 {
+    font-size: 16px;
+  }
 }
 
 header {
@@ -390,18 +485,56 @@ header {
 }
 .header-localisation__icon {
   display: inline-block;
+  font-size: 16px;
+}
+@media screen and (min-width: 375px) {
+  .header-localisation__icon {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .header-localisation__icon {
+    font-size: 22px;
+  }
 }
 .header-localisation__place {
   display: inline-block;
   padding-left: 10px;
+  font-size: 16px;
+}
+@media screen and (min-width: 375px) {
+  .header-localisation__place {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .header-localisation__place {
+    font-size: 18px;
+  }
 }
 
 footer {
   background-color: #353535;
   color: white;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-left: 20px;
   padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.footer-contact {
+  color: white;
+  text-decoration: none;
+}
+.footer-contact:visited {
+  color: white;
 }
 
 body {
@@ -439,23 +572,6 @@ body {
   margin-left: -9px;
   margin-bottom: 20px;
 }
-.functioning__btn {
-  text-align: left;
-}
-.functioning__number {
-  display: inline-block;
-  position: relative;
-  right: 15px;
-  border: 1px solid black;
-  width: 18px;
-  height: 18px;
-  line-height: 19px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: #9356DC;
-  color: white;
-  border: none;
-}
 
 .restaurants {
   padding-left: 20px;
@@ -467,6 +583,14 @@ body {
   gap: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
 .menu-page {
   width: 100%;
 }
@@ -475,6 +599,16 @@ body {
   width: 100%;
   height: 180px;
   position: relative;
+}
+@media screen and (min-width: 375px) {
+  .menu-page-restaurant {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .menu-page-restaurant {
+    height: 230px;
+  }
 }
 .menu-page-restaurant__image {
   position: absolute;
@@ -490,6 +624,10 @@ body {
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 40px;
+}
+
+.menu-complete:last-child {
+  align-items: center;
 }
 
 .restaurant-title {
@@ -509,13 +647,52 @@ body {
 }
 
 .image-la_note_enchantee {
-  top: -70px;
-  overflow: hidden;
+  top: -85px;
+}
+@media screen and (min-width: 375px) {
+  .image-la_note_enchantee {
+    top: -100px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .image-la_note_enchantee {
+    top: -115px;
+  }
+}
+
+.image-a_la_francaise {
+  top: 10px;
+}
+@media screen and (min-width: 375px) {
+  .image-a_la_francaise {
+    top: 0px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .image-a_la_francaise {
+    top: 0px;
+  }
+}
+
+.image-le_delice_des_sens {
+  top: 5px;
+}
+@media screen and (min-width: 375px) {
+  .image-le_delice_des_sens {
+    top: -8px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .image-le_delice_des_sens {
+    top: -5px;
+  }
 }
 
 .explore__btn {
+  margin: auto;
   width: 63%;
   height: 50px;
+  line-height: 50px;
   border-radius: 25px;
   font-size: 14px;
   color: white;
@@ -524,19 +701,76 @@ body {
   box-shadow: 0px 5px 5px rgb(218, 213, 213);
   margin-top: 20px;
 }
+@media screen and (min-width: 375px) {
+  .explore__btn {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .explore__btn {
+    font-size: 18px;
+  }
+}
 
 .functioning__btn {
   margin-bottom: 20px;
   width: 95%;
-  height: 40px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 10px;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   box-shadow: 0px 2px 5px rgb(218, 213, 213);
+  text-align: left;
+}
+@media screen and (min-width: 375px) {
+  .functioning__btn {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .functioning__btn {
+    font-size: 18px;
+  }
+}
+.functioning__btn:hover {
+  background-color: #f5edff;
+}
+.functioning__btn:hover:hover i {
+  color: #9356DC;
 }
 .functioning__icon {
+  margin-left: 5px;
   margin-right: 15px;
+}
+.functioning__number {
+  display: inline-block;
+  position: relative;
+  right: 10px;
+  border: 1px solid black;
+  width: 18px;
+  height: 18px;
+  line-height: 19px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #9356DC;
+  color: white;
+  border: none;
+}
+@media screen and (min-width: 375px) {
+  .functioning__number {
+    width: 20px;
+    height: 20px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .functioning__number {
+    width: 22px;
+    height: 22px;
+    line-height: 23px;
+  }
 }
 
 .btn-menu-complete-part {
@@ -559,12 +793,39 @@ body {
   margin-left: 5px;
   margin-bottom: 5px;
   padding-right: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 375px) {
+  .btn-menu-complete-part__food-title {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .btn-menu-complete-part__food-title {
+    font-size: 19px;
+  }
 }
 .btn-menu-complete-part__food-complement {
   font-size: 12px;
   margin-left: 5px;
   margin-top: 0;
   margin-bottom: 0px;
+  padding-right: 65px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 375px) {
+  .btn-menu-complete-part__food-complement {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .btn-menu-complete-part__food-complement {
+    font-size: 16px;
+  }
 }
 .btn-menu-complete-part__food-price {
   margin: 0;
@@ -576,15 +837,36 @@ body {
   right: 15px;
   bottom: 15px;
 }
+@media screen and (min-width: 375px) {
+  .btn-menu-complete-part__food-price {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .btn-menu-complete-part__food-price {
+    font-size: 16px;
+  }
+}
 
 .restaurants-link {
+  position: relative;
+  top: -20px;
+  height: 200px;
   margin: 0;
+  text-decoration: none;
+}
+.restaurants-link:visited {
+  color: black;
 }
 
 .restaurants {
+  background-color: #f6f6f6;
   margin-bottom: 40px;
 }
 .restaurants__cards {
+  z-index: 0;
+  display: block;
+  color: black;
   min-width: 280px;
   height: 215px;
   overflow: hidden;
@@ -593,13 +875,44 @@ body {
   border-radius: 10px 10px 0px 0px;
   margin: 0;
 }
+@media screen and (min-width: 375px) {
+  .restaurants__cards {
+    height: 225px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards {
+    height: 235px;
+  }
+}
 .restaurants__cards__images {
+  z-index: 0;
+  display: block;
+  position: relative;
+  top: -45px;
+  overflow: hidden;
   margin: 0;
-  min-height: 150px;
-  max-height: 150px;
+  min-height: 190px;
+  max-height: 190px;
   object-fit: cover;
 }
+@media screen and (min-width: 375px) {
+  .restaurants__cards__images {
+    min-height: 205px;
+    max-height: 205px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards__images {
+    min-height: 215px;
+    max-height: 215px;
+  }
+}
 .restaurants__cards__figcaption {
+  z-index: 1;
+  position: relative;
+  top: -45px;
+  display: block;
   text-align: left;
   height: 60px;
   border-radius: 0px 0px 10px 10px;
@@ -607,15 +920,45 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 375px) {
+  .restaurants__cards__figcaption {
+    height: 65px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards__figcaption {
+    height: 70px;
+  }
+}
 .restaurants__cards__figcaption-title {
   margin-top: 10px;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 0px;
 }
+@media screen and (min-width: 375px) {
+  .restaurants__cards__figcaption-title {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards__figcaption-title {
+    font-size: 19px;
+  }
+}
 .restaurants__cards__figcaption-place {
   margin-top: 5px;
   font-size: 13px;
+}
+@media screen and (min-width: 375px) {
+  .restaurants__cards__figcaption-place {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards__figcaption-place {
+    font-size: 17px;
+  }
 }
 .restaurants__cards__figcaption-heart {
   font-size: 20px;
@@ -624,6 +967,44 @@ body {
   text-align: right;
   position: relative;
   bottom: 45px;
+}
+@media screen and (min-width: 375px) {
+  .restaurants__cards__figcaption-heart {
+    font-size: 22px;
+    bottom: 50px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .restaurants__cards__figcaption-heart {
+    font-size: 24px;
+    bottom: 55px;
+  }
+}
+
+.new-restaurant-text {
+  color: #4cb49b;
+  font-size: 12px;
+  z-index: 1;
+  display: inline-block;
+  background-color: #99e2d0;
+  margin: 0;
+  padding: 5px;
+  border-radius: 2px;
+  position: relative;
+  top: 40px;
+  left: 100px;
+}
+@media screen and (min-width: 375px) {
+  .new-restaurant-text {
+    font-size: 14px;
+    left: 120px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .new-restaurant-text {
+    font-size: 16px;
+    left: 140px;
+  }
 }
 
 .header-menu {
@@ -634,16 +1015,36 @@ body {
   background-color: white;
 }
 .header-menu__h1 {
-  font-size: 26px;
+  font-size: 30px;
+  font-weight: 500px;
   text-align: center;
   font-family: "Shrikhand", cursive;
   margin: 0;
 }
+@media screen and (min-width: 375px) {
+  .header-menu__h1 {
+    font-size: 32px;
+  }
+}
 .header-menu__arrow {
   position: relative;
   right: 130px;
-  top: 25px;
-  font-size: 18px;
+  top: 30px;
+  font-size: 22px;
+}
+@media screen and (min-width: 375px) {
+  .header-menu__arrow {
+    font-size: 24px;
+    top: 30px;
+    right: 150px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .header-menu__arrow {
+    font-size: 26px;
+    top: 30px;
+    right: 160px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
