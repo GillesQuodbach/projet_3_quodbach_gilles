@@ -1,111 +1,249 @@
-
-.restaurants-link{
-    position: relative;
-    top: -20px;
-    height: 200px;
+// CONTAINER <a> DES CARDES
+.restaurant-link {
+    display: block;
     margin: 0;
-    text-decoration: none;
-    &:visited{
-        color: black;
+    padding: 0;
+    margin: 0;
 }
-}
-.restaurants{
+
+// PARTIE AVEC LES CARDS
+.restaurants {
+    // PARTIE AVEC LES CARDS
     background-color: #f6f6f6;
-    margin-bottom: 40px;
-    &__cards{
-        z-index: 0;
-        display: block;
-        color: black;
-        min-width: 280px;
-        height: 215px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        border-radius: $radius-figure;
-        margin: 0;
-        @include mobile-m-only{
-            height: 225px;
-        }
-        @include mobile-l-only{
-            height: 235px;
-        }
-        
-        &__images{
-            z-index: 0;
-            display: block;
-            position: relative;
-            top: -45px;
-            overflow: hidden;
-            margin: 0;
-            min-height: 190px;
-            max-height: 190px;
-            object-fit: cover;
-            @include mobile-m-only{
-                min-height: 205px;
-                max-height: 205px;
-            }
-            @include mobile-l-only{
-                min-height: 215px;
-                max-height: 215px;
-            }
-            // enlève l'espace entre figure et figcaption   
-        }  
-        &__figcaption{
-            z-index: 1;
-            position: relative;
-            top: -45px;
-            display: block;
-            text-align: left;
-            height: 60px;
-            border-radius: $radius-figcaption;
-            box-shadow: $shadows;
-            padding-left: 15px;
-            padding-right: 15px;
-            @include mobile-m-only{
-                height: 65px;
-            }
-            @include mobile-l-only{
-                height: 70px;
-            }
-        }
-        &__figcaption-title{
-            margin-top: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 0px;
-            @include mobile-m-only{
-                font-size: 17px;
-            }
-            @include mobile-l-only{
-                font-size: 19px;
-            }
-            }
-        &__figcaption-place{
-                margin-top: 5px;
-                font-size: 13px;
-                @include mobile-m-only{
-                    font-size: 15px;
-                }
-                @include mobile-l-only{
-                    font-size: 17px;
-                }
-            }
-        &__figcaption-heart{
-                font-size: 20px;
-                color: grey;
-                display: block;
-                text-align: right;
-                position: relative;
-                bottom: 45px;
-                @include mobile-m-only{
-                    font-size: 22px;
-                    bottom: 50px;
-                }
-                @include mobile-l-only{
-                    font-size: 24px;
-                    bottom: 55px;
-                }
-            }
-            
-        }  
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include tablette-only {
+        padding-bottom: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
+    @include desktop-only {
+        padding-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    &__h2 {
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        padding-top: 40px;
+
+        @include mobile-m-only {
+            font-size: 22px;
+        }
+
+        @include mobile-l-only {
+            font-size: 26px;
+        }
+
+        @include tablette-only {
+            font-size: 36px;
+            margin-bottom: 0;
+            padding: 0;
+            margin-right: 760px;
+        }
+        @include desktop-only {
+            font-size: 40px;
+            margin-bottom: 0;
+            padding: 0;
+            margin-right: 760px;
+        }
+
+        @include desktop-only {
+            font-size: 49px;
+            margin-bottom: 0;
+            padding: 0;
+            margin-right: 0px;
+        }
+    }
+
+    &__cards {
+        // LES CARDS
+        margin: 0;
+        min-width: 280px;
+        min-height: 215px;
+        max-height: 215px;
+        position: relative;
+        z-index: 1;
+
+        @include mobile-m-only {
+            min-height: 235px;
+            max-height: 235px;
+        }
+
+        @include mobile-l-only {
+            min-height: 255px;
+            max-height: 255px;
+        }
+
+        @include tablette-only {
+            min-height: 245px;
+            max-height: 245px;
+            min-width: 350px;
+        }
+
+        &__images {
+            width: 100%;
+            min-height: 155px;
+            max-height: 155px;
+            object-fit: cover;
+            vertical-align: middle;
+            overflow: hidden;
+            border-radius: $radius-figure;
+            z-index: -1;
+
+            @include mobile-m-only {
+                min-height: 165px;
+                max-height: 165px;
+            }
+
+            @include mobile-l-only {
+                min-height: 175px;
+                max-height: 175px;
+            }
+
+            @include tablette-only {
+                min-height: 170px;
+                max-height: 170px;
+            }
+
+        }
+
+        &__figcaption {
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            height: 65px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            border-radius: $radius-figcaption;
+            z-index: 1;
+
+            @include mobile-m-only {
+                height: 75px;
+                height: 75px;
+            }
+
+            @include mobile-l-only {
+                height: 85px;
+                height: 85px;
+            }
+
+            @include tablette-only {
+                min-height: 80px;
+                max-height: 80px;
+            }
+
+            &__title {
+                // Nom du resto
+                width: 100%;
+                margin: 0;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                margin-left: 15px;
+                font-weight: 600;
+                font-size: 16px;
+
+                @include mobile-m-only {
+                    font-size: 18px;
+                }
+
+                @include mobile-l-only {
+                    font-size: 20px;
+                }
+
+                @include tablette-only {
+                    font-size: 24px;
+                }
+            }
+
+            &__place {
+                //Emplecement du resto
+                display: block;
+                width: 100%;
+                margin: 0;
+                margin-left: 15px;
+                padding-bottom: 15px;
+                font-weight: 400;
+                font-size: 14px;
+
+                @include mobile-m-only {
+                    font-size: 16px;
+                }
+
+                @include mobile-m-only {
+                    font-size: 18px;
+                }
+            }
+
+            &__heart {
+                //Emplecement du coeur
+                display: block;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                left: 245px;
+                bottom: 45px;
+                font-size: 20px;
+                min-width: 280px;
+
+                @include mobile-m-only {
+                    left: 285px;
+                    bottom: 50px;
+                    font-size: 24px;
+                }
+
+                @include mobile-l-only {
+                    left: 335px;
+                    bottom: 55px;
+                    font-size: 26px;
+                }
+
+                @include tablette-only {
+                    left: 290px;
+                    bottom: 60px;
+                    font-size: 32px;
+                }
+            }
+
+            &__new {
+                //Mise en forme box NOUVEAU
+                display: block;
+                margin: 0;
+                padding: 5px;
+                width: fit-content;
+                color: $colour-font-new;
+                background-color: $colour-bcg-new;
+                position: relative;
+                bottom: 200px;
+                left: 210px;
+                border-radius: 2px;
+                font-size: 12px;
+                font-weight: 600;
+
+                @include mobile-m-only {
+                    left: 260px;
+                    bottom: 220px;
+                    font-size: 14px;
+                }
+
+                @include mobile-l-only {
+                    left: 305px;
+                    bottom: 230px;
+                    font-size: 16px;
+                }
+
+                @include tablette-only {
+                    left: 230px;
+                    bottom: 240px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

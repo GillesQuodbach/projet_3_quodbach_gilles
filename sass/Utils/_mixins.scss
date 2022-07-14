@@ -3,9 +3,18 @@
         @content;
     }
 }
-
 @mixin mobile-l-only {
     @media screen and (min-width: map-get($breakpoints, mobile-l)){
+        @content;
+    }
+}
+@mixin tablette-only {
+    @media screen and (min-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
         @content;
     }
 }

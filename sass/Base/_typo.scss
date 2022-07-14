@@ -16,6 +16,9 @@
     @include mobile-l-only{
         font-size: 34px;
     }
+    @include tablette-only {
+        font-size: 50px;
+        }
 }
 // Titre partie explore
 .explore{
@@ -30,6 +33,11 @@
     @include mobile-l-only{
         font-size: 32px;
     }
+    @include tablette-only {
+        font-size: 40px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        }
     }
     &__h3{
         font-size: 16px;
@@ -40,6 +48,10 @@
         @include mobile-l-only{
             font-size: 20px;
         }
+        @include tablette-only {
+            font-size: 24px;
+            margin-top: 5px;
+            }
     }
 }
 // Titre FONCTIONNEMENT
@@ -55,23 +67,14 @@
         @include mobile-l-only{
             font-size: 26px;
         }
-    }
-}
-// Titre RESTAURANTS
-.restaurants{
-    &__h2{
-        text-align: left;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 0;
-        @include mobile-m-only{
-            font-size: 22px;
-        }
-        @include mobile-l-only{
-            font-size: 26px;
+        @include tablette-only{
+            text-align: center;
+            font-size: 36px;
+            margin-top: 0;
         }
     }
 }
+
 
 // !PARTIE MENU
 //Titre du restaurant
