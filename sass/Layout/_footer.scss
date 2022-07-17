@@ -3,8 +3,41 @@ footer{
     color: white;
     padding-top: 15px;
     padding-left: 20px;  
-    padding-bottom: 10px;   
+    padding-bottom: 30px;   
     }
+
+// !TYPO FOOTER
+// Titre du FOOTER
+.footer-h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    @include mobile-m-only{
+        font-size: 20px;
+    }
+    @include mobile-l-only{
+        font-size: 22px;
+    }
+    @include tablette-only{
+        font-size: 30px;
+    }
+}
+.footer-h5{
+    font-size: 14px;
+    margin: 3px;
+    @include mobile-m-only{
+        font-size: 14px;
+    }
+    @include mobile-m-only{
+        font-size: 16px;
+    }
+    @include tablette-only{
+        font-size: 26px;
+    }
+}
+
 
 // Mise en forme des liens
 a {

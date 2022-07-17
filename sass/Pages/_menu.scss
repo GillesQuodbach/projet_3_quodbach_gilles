@@ -1,5 +1,9 @@
 .menu-page{
-    width: 100%;   
+    width: 100%;  
+    @include desktop-L-only{
+        width: 1025px;
+        margin: auto;
+    }
 }
 .menu-page-restaurant{
     width: 100%;
@@ -10,6 +14,12 @@
     }
     @include mobile-l-only{
         height: 230px;
+    }
+    @include tablette-only{
+        height: 450px;
+    }
+    @include desktop-only{
+        height: 600px;
     }
     &__image{
         position: absolute;
@@ -31,19 +41,216 @@
     align-items: center;
 }
 .restaurant-title{
+    width: 100%;
+    display: block;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include desktop-only{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__text{
+        font-size: 24px;
+        font-family: 'Shrikhand', cursive;
+        margin: 0;
+        @include mobile-m-only{
+            font-size: 28px;
+       }
+       @include mobile-l-only{
+        font-size: 32px;
+        }
+        @include tablette-only{
+            font-size: 56px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @include desktop-only{
+            font-size: 70px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    }
+    &__heart{
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        @include mobile-m-only{
+            font-size: 24px;
+       }
+       @include mobile-l-only{
+        font-size: 32px;
+        @include tablette-only{
+            font-size: 56px;
+            padding-right: 20px;
+        }
+        @include desktop-only{
+            font-size: 70px;
+            padding-right: 20px;
+            padding-top: 0px;
+        }
+   }
+    }
 }
 
+// PARTIE DU MENU (entree - plat - dessert)
 .menu-complete-part{
     text-align: center;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
-
+// PARTIE DU MENU TITRE (entree - plat - dessert)
 .menu-complete-part-title{
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
     text-align: left;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include tablette-only{
+        margin: auto;
+        width: min-content;
+        border-bottom: 4px solid $colour-tertiary; 
+        margin-bottom: 30px;  
+    }
+    @include desktop-only{
+        margin: auto;
+        width: min-content;
+        border-bottom: 4px solid $colour-tertiary; 
+        margin-bottom: 30px;  
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        width: 13%;
+        height: 1px;
+        bottom: -5px;
+        left: 0;
+        border-bottom: 4px solid $colour-tertiary;
+        @include desktop-only{
+            display: none; 
+        }
+    }
+    @include mobile-m-only{
+        font-size: 17px;
+    }
+    @include mobile-l-only{
+        font-size: 19px;
+    }
+    @include tablette-only{
+        font-size: 36px;
+    }
+    @include desktop-only{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+}
+
+// BOUTON CHOIX PLATS
+.btn-menu-complete-part{
+    background-color: white;
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: $shadows;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    margin-bottom: 15px;
+    text-align: left;
+    @include tablette-only{
+        width: 700px;
+        padding-left: 10px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    &__food-title{
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        padding-right: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include mobile-m-only{
+            font-size: 17px;
+        }
+        @include mobile-l-only{
+            font-size: 19px;
+            padding-top: 5px;
+        }
+        @include tablette-only{
+            font-size: 36px;
+            padding-top: 10px;
+        }
+    }
+    &__food-complement{
+        font-size: 12px;
+        margin-left: 5px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        padding-right: 65px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include mobile-m-only{
+            font-size: 14px;
+        }
+        @include mobile-l-only{
+            font-size: 16px;
+        }
+        @include tablette-only{
+            font-size: 28px;
+            padding-top: 5px;
+        }
+    }
+    &__food-price{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: right;
+        position: relative;
+        right: 15px;
+        bottom: 14px;
+        @include mobile-m-only{
+            font-size: 14px;
+            bottom: 16px;
+        }
+        @include mobile-l-only{
+            font-size: 16px;
+            bottom:18px;
+        }
+        @include tablette-only{
+            font-size: 30px;
+            bottom:33px;
+        }
+    }
+}
+
+// ANIMATION BOUTON CHOIX DU MENU
+.progress {
+        height: 70px;
+        width: 50px;
+        background-color: $colour-tertiary;
+        margin-left: auto;
+    &__bar{
+        transform: scaleX(0);
+        
+    }
 }
 
 // !POSITION IMAGE MENU

@@ -16,6 +16,9 @@ header{
         @include mobile-l-only{
             font-size: 22px;
         }
+        @include tablette-only{
+            font-size: 26px;
+        }
     }
     &__place{
         display:inline-block;
@@ -26,6 +29,9 @@ header{
         }
         @include mobile-l-only{
             font-size: 18px;
+        }
+        @include tablette-only{
+            font-size: 26px;
         }
     }
 }

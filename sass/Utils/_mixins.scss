@@ -18,3 +18,13 @@
         @content;
     }
 }
+@mixin desktop-L-only {
+    @media screen and (min-width: map-get($breakpoints, desktop-L)){
+        @content;
+    }
+}
+@mixin desktop-XL-only {
+    @media screen and (min-width: map-get($breakpoints, desktop-L)){
+        @content;
+    }
+}
