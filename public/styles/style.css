@@ -390,6 +390,12 @@ footer {
   padding-left: 20px;
   padding-bottom: 30px;
 }
+@media screen and (min-width: 1440px) {
+  footer {
+    width: 1005px;
+    margin: auto;
+  }
+}
 
 .footer-h4 {
   font-family: "Shrikhand", cursive;
@@ -809,7 +815,7 @@ a:visited {
   }
 }
 .restaurant-title__text {
-  font-size: 24px;
+  font-size: 23px;
   font-family: "Shrikhand", cursive;
   margin: 0;
 }
@@ -840,9 +846,10 @@ a:visited {
   }
 }
 .restaurant-title__heart {
-  font-size: 20px;
+  font-size: 23px;
   margin: 0;
   padding: 0;
+  padding-right: 15px;
 }
 @media screen and (min-width: 375px) {
   .restaurant-title__heart {
@@ -937,118 +944,81 @@ a:visited {
   }
 }
 
-.btn-menu-complete-part {
-  background-color: white;
+.menu-complete-part-title {
   width: 100%;
-  min-height: 40px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px rgb(218, 213, 213);
-  margin: 0;
-  padding: 0;
-  padding-left: 5px;
-  margin-bottom: 15px;
-  text-align: left;
-}
-@media screen and (min-width: 768px) {
-  .btn-menu-complete-part {
-    width: 700px;
-    padding-left: 10px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-}
-.btn-menu-complete-part__food-title {
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  padding-right: 60px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@media screen and (min-width: 375px) {
-  .btn-menu-complete-part__food-title {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 425px) {
-  .btn-menu-complete-part__food-title {
-    font-size: 19px;
-    padding-top: 5px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .btn-menu-complete-part__food-title {
-    font-size: 36px;
-    padding-top: 10px;
-  }
-}
-.btn-menu-complete-part__food-complement {
-  font-size: 12px;
-  margin-left: 5px;
-  margin-top: 0;
-  margin-bottom: 0px;
-  padding-right: 65px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@media screen and (min-width: 375px) {
-  .btn-menu-complete-part__food-complement {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 425px) {
-  .btn-menu-complete-part__food-complement {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .btn-menu-complete-part__food-complement {
-    font-size: 28px;
-    padding-top: 5px;
-  }
-}
-.btn-menu-complete-part__food-price {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 600;
-  text-align: right;
-  position: relative;
-  right: 15px;
-  bottom: 14px;
-}
-@media screen and (min-width: 375px) {
-  .btn-menu-complete-part__food-price {
-    font-size: 14px;
-    bottom: 16px;
-  }
-}
-@media screen and (min-width: 425px) {
-  .btn-menu-complete-part__food-price {
-    font-size: 16px;
-    bottom: 18px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .btn-menu-complete-part__food-price {
-    font-size: 30px;
-    bottom: 33px;
-  }
+  font-size: 14px;
 }
 
-.progress {
-  height: 70px;
-  width: 50px;
-  background-color: #99E2D0;
-  margin-left: auto;
+.menus {
+  display: flex;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgb(223, 219, 219);
+  margin-bottom: 10px;
 }
-.progress__bar {
-  transform: scaleX(0);
+.menus:hover > .box {
+  width: 4em;
+}
+.menus:hover > .box .check {
+  transform: rotate(0deg);
+}
+
+.plate-name {
+  flex-grow: 1;
+  width: 10em;
+  text-align: left;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.plate-name__intitule {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-right: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.plate-name__complement {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+  width: 3em;
+  margin-top: auto;
+}
+.price__howmany {
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+}
+
+.box {
+  display: flex;
+  width: 0;
+  transition: all 1s;
+  background-color: #99E2D0;
+}
+.box .check {
+  font-size: 20px;
+  margin: auto;
+  color: white;
+  transition: transform 1s;
+  transform: rotate(-180deg);
 }
 
 .image-la_note_enchantee {
