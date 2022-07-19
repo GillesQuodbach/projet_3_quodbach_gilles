@@ -55,7 +55,7 @@
         margin-bottom: 20px;
     }
     &__text{
-        font-size: 23px;
+        font-size: 24px;
         font-family: 'Shrikhand', cursive;
         margin: 0;
         @include mobile-m-only{
@@ -78,10 +78,10 @@
         }
     }
     &__heart{
-        font-size: 23px;
+        font-size: 24px;
         margin: 0;
         padding: 0;
-        padding-right: 15px;
+        padding-right: 20px;
         @include mobile-m-only{
             font-size: 24px;
        }
@@ -103,36 +103,46 @@
 // PARTIE DU MENU (entree - plat - dessert)
 .menu-complete-part{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
 // PARTIE DU MENU TITRE (entree - plat - dessert)
 .menu-complete-part-title{
+    width: 100%;
     display: inline-block;
     padding-bottom: 5px;
     position: relative;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 20px;
+    @include mobile-m-only{
+        font-size: 16px;
+    }
+    @include mobile-l-only{
+        font-size: 18px;
+    }
     @include tablette-only{
+        font-size: 36px;
         margin: auto;
         width: min-content;
         border-bottom: 4px solid $colour-tertiary; 
         margin-bottom: 30px;  
     }
     @include desktop-only{
+        font-size: 40px;
         margin: auto;
         width: min-content;
         border-bottom: 4px solid $colour-tertiary; 
-        margin-bottom: 30px;  
+        margin-bottom: 30px;
+        text-align: center;  
     }
     &:after{
         content: "";
         position: absolute;
-        width: 13%;
+        width: 12%;
         height: 1px;
         bottom: -5px;
         left: 0;
@@ -141,35 +151,19 @@
             display: none; 
         }
     }
-    @include mobile-m-only{
-        font-size: 17px;
-    }
-    @include mobile-l-only{
-        font-size: 19px;
-    }
-    @include tablette-only{
-        font-size: 36px;
-    }
-    @include desktop-only{
-        font-size: 40px;
-        text-align: center;
-    }
+    
     
 }
 
 // BOUTON CHOIX PLATS +ANIMATION
-.menu-complete-part-title{
-    width: 100%;
-    font-size: 14px;
-}
 
 .menus{
     display: flex;
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px rgb(223, 219, 219);
-    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgb(198, 195, 195);
+    margin-bottom: 15px;
     &:hover > .box{
         width: 4em;
         .check{
@@ -195,41 +189,90 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        @include mobile-m-only{
+            font-size: 16px;
+        }
+        @include mobile-l-only{
+            font-size: 18px;
+        }
+        @include tablette-only{
+            font-size: 36px;
+        }
+        @include desktop-only{
+            font-size: 40px;
+        }
     
     }
     &__complement{
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
         margin: 0;
         margin-bottom: 10px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        @include mobile-m-only{
+            font-size: 14px;
+        }
+        @include mobile-l-only{
+            font-size: 16px;
+        }
+        @include tablette-only{
+            font-size: 30px;
+        }
+        @include desktop-only{
+            font-size: 32px;
+        }
     }
 }
 .price{
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     margin-bottom: 10px;
-    width: 3em;
+    width: 16%;
     margin-top: auto;
     &__howmany{
         font-weight: 600;
         margin: 0;
         text-align: left;   
     }
+    @include mobile-m-only{
+        font-size: 17px;
+    }
+    @include mobile-l-only{
+        font-size: 19px;
+    }
+    @include tablette-only{
+        font-size: 36px;
+    }
+    @include desktop-only{
+        font-size: 40px;
+        
+    }
 }
 .box{
     display: flex;
     width: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     background-color: $colour-tertiary;
 .check{
     font-size: 20px;
     margin: auto;
     color: white;
-    transition: transform   1s;
+    transition: transform   0.5s;
     transform: rotate(-180deg);
+    @include mobile-m-only{
+        font-size: 17px;
+    }
+    @include mobile-l-only{
+        font-size: 19px;
+    }
+    @include tablette-only{
+        font-size: 36px;
+    }
+    @include desktop-only{
+        font-size: 40px;
+    }
 }
 
 }
