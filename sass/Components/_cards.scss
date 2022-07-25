@@ -35,10 +35,11 @@
         padding-bottom: 20px;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 700px;
+        height: 250px;
     }
     @include desktop-L-only {
-        height: 900px;
+        height: 280px;
+        
         
     }
     
@@ -71,10 +72,11 @@
         
         @include desktop-only {
             font-size: 22px;
-            margin-bottom: 0;
+            margin-bottom: 10px;
             padding: 0;
             margin-right: 0px;
-            width: 100%;
+            flex-basis: 100%;
+            
         }
         @include desktop-L-only {
             font-size: 22px;
@@ -107,11 +109,11 @@
         @include desktop-only {
             min-height: 300px;
             max-height: 300px;
-            min-width: 450px;
+            min-width: 230px;
         }
         @include desktop-L-only {
-            min-height: 400px;
-            min-width: 650px;
+            min-height: 300px;
+            min-width: 310px;
         }
         
 
@@ -140,12 +142,14 @@
                 max-height: 180px;
             }
             @include desktop-only {
-                min-height: 230px;
-                max-height: 230px;
+                min-height: 130px;
+                max-height: 130px;
                 min-width: 100%; 
             }
             @include desktop-L-only {
-                min-height: 330px;
+                min-height: 160px;
+                max-height: 160px;
+                min-width: 100%;
             }
 
         }
@@ -175,8 +179,8 @@
         
             }
             @include desktop-only {
-                min-height: 70px;
-                max-height: 70px;
+                min-height: 60px;
+                max-height: 60px;
                 min-width: 100%;
             }
             @include desktop-L-only {
@@ -208,10 +212,10 @@
                     font-size: 16px;
                 }
                 @include desktop-only {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
                 @include desktop-L-only {
-                    font-size: 20px;
+                    
                 }
             }
 
@@ -233,10 +237,10 @@
                     font-size: 16px;
                 }
                 @include desktop-only {
-                    font-size: 18px;
+                    font-size: 14px;
                 }
                 @include desktop-L-only {
-                    font-size: 18px;
+                    
                 }
             }
 
@@ -271,12 +275,12 @@
                     margin: 0;
                 }
                 @include desktop-only {
-                    left: 400px;
-                    bottom: 55px;
+                    left: 190px;
+                    bottom: 50px;
                     font-size: 20px;
                 }
                 @include desktop-L-only {
-                    left: 580px;
+                    left: 250px;
                     bottom: 55px;
                     font-size: 22px;
                 }
@@ -318,14 +322,14 @@
                     font-size: 16px;
                 }
                 @include desktop-only {
-                    left: 320px;
-                    bottom: 300px;
-                    font-size: 22px;
+                    left: 145px;
+                    bottom: 195px;
+                    font-size: 12px;
                 }
                 @include desktop-L-only {
-                    left: 500px;
-                    bottom: 390px;
-                    font-size: 24px;
+                    left: 220px;
+                    bottom: 210px;
+                    font-size: 12px;
                 }
                 
             }
@@ -348,10 +352,10 @@
         object-position: 0px -50px;
     }
     @include desktop-only {
-        object-position: 0px -70px;
+        object-position: 0px -20px;
     }
     @include desktop-L-only {
-        object-position: 0px -105px;
+        object-position: 0px -25px;
     }
 }
 // CARDS 2
@@ -367,10 +371,10 @@
         object-position: 0px -160px;
     }
     @include desktop-only {
-        object-position: 0px -200px;
+        object-position: 0px -65px;
     }
     @include desktop-L-only {
-        object-position: 0px -290px;
+        object-position: 0px -110px;
     }
 }
 // CARDS 3
@@ -386,10 +390,10 @@
         object-position: 0px -50px;
     }
     @include desktop-only {
-        object-position: 0px -70px;
+        object-position: 0px -15px;
     }
     @include desktop-L-only {
-        object-position: 0px -105px;
+        object-position: 0px -55px;
     }
 }
 
@@ -403,10 +407,13 @@
         object-position: 0px -65px;
     }
     @include tablette-only {
-        object-position: 0px -70px;
+        object-position: 0px -30px;
     }
     @include desktop-L-only {
-        object-position: 0px -110px;
+        object-position: 0px -30px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -60px;
     }
     
 }
