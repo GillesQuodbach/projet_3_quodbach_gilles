@@ -254,6 +254,7 @@
                 bottom: 45px;
                 font-size: 18px;
                 width: min-content;
+                z-index: 1000;
 
                 @include mobile-m-only {
                     left: 285px;
@@ -337,6 +338,27 @@
     }
 }
 
+.colored-heart{
+    z-index: 1111;
+    position: relative;
+    overflow: visible;
+    bottom: 63px;
+    background:-webkit-linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
+    background-clip:text ;
+    -webkit-background-clip:text ;
+    color: transparent;
+    transform: scaleY(1);
+    animation: heart-color 1s all;
+    &:hover{
+        @keyframes heart-color {
+            from{transform: scaleY(0);}
+            to{ transform: scaleY(1);}
+            
+        }
+    }
+    
+    
+}
 // CADRAGE IMAGE CARDS
 
 // CARDS 1

@@ -1,5 +1,7 @@
 $colour-primary: #9356DC;
+$light-colour-primary: lighten($colour-primary, 10%);
 $colour-secondary: #FF79DA;
+$light-colour-secondary: lighten($colour-secondary, 10%);
 $colour-tertiary: #99E2D0;
 $colour-fonction-btn:#F6F6F6;
 $background-hover:#f5edff;
@@ -8,6 +10,8 @@ $colour-font-new:#4cb49b;
 $radius-figure: 10px 10px 0px 0px;
 $radius-figcaption: 0px 0px 15px 15px;
 $shadows:0px 2px 5px rgb(218, 213, 213);
+$gradient-colour: linear-gradient($light-colour-secondary, $light-colour-primary);
+
 
 $breakpoints:(
     mobile-s: 320px,

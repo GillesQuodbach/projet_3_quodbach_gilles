@@ -491,12 +491,98 @@ body {
   }
 }
 
-.spinner {
-  width: 100px;
-  height: 100px;
-  position: relative;
+.spinner-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #0b0b0b;
+  animation: spin-background 3s linear forwards;
+  animation-delay: 1;
 }
 
+.spinner1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spinner1 3s linear forwards;
+}
+
+.spinner2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-bottom-color: #FF79DA;
+  border-radius: 50%;
+  animation: spinner2 3s linear forwards;
+}
+
+@keyframes spin-background {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -10;
+  }
+}
+@keyframes spinner1 {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+    opacity: 1;
+  }
+  99% {
+    transform: rotate(360deg);
+    border-width: 10px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -99999;
+  }
+}
+@keyframes spinner2 {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+    opacity: 1;
+  }
+  99% {
+    transform: rotate(360deg);
+    border-width: 1px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -99999;
+  }
+}
 .explore {
   padding-top: 10px;
   padding-bottom: 40px;
@@ -572,6 +658,9 @@ body {
   box-shadow: 0px 5px 5px rgb(218, 213, 213);
   margin-top: 40px;
   margin-bottom: 20px;
+}
+.explore__btn:hover {
+  background: linear-gradient(#fface8, #ae80e5);
 }
 @media screen and (min-width: 375px) {
   .explore__btn {
@@ -1658,6 +1747,7 @@ a:visited {
   bottom: 45px;
   font-size: 18px;
   width: min-content;
+  z-index: 1000;
 }
 @media screen and (min-width: 375px) {
   .restaurants__cards__figcaption__heart {
@@ -1746,6 +1836,27 @@ a:visited {
     left: 220px;
     bottom: 210px;
     font-size: 12px;
+  }
+}
+
+.colored-heart {
+  z-index: 1111;
+  position: relative;
+  overflow: visible;
+  bottom: 63px;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scaleY(1);
+  animation: heart-color 1s all;
+}
+@keyframes heart-color {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
 
