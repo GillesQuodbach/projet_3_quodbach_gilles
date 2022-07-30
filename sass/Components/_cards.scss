@@ -158,7 +158,7 @@
             width: 100%;
             background-color: white;
             margin: 0;
-            height: 60px;
+            height: 55px;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -166,11 +166,11 @@
             z-index: 1;
 
             @include mobile-m-only {
-                height: 70px;
+                height: 65px;
             }
 
             @include mobile-l-only {
-                height: 70px;
+                height: 65px;
             }
 
             @include tablette-only {
@@ -245,16 +245,42 @@
             }
 
             &__heart {
-                //Emplecement du coeur
-                display: block;
+                //Emplacement du coeur
+                width: min-content;
                 margin: 0;
                 padding: 0;
-                position: relative;
                 left: 245px;
                 bottom: 45px;
                 font-size: 18px;
-                width: min-content;
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: antialiased;
                 z-index: 1000;
+                font-weight: 400;
+                background-color: white;
+                &::after{
+                    content: "\f004";
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 1111111111;
+                    font-weight: 900;
+                    transform: scale(0);
+                    transition: transform 1s ease;
+                    background: -webkit-linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
+                    background: linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
+                    background-clip:text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+                &:hover::after{
+                    transform: scale(1.05);
+                }
+                
 
                 @include mobile-m-only {
                     left: 285px;
@@ -299,7 +325,7 @@
                 color: $colour-font-new;
                 background-color: $colour-bcg-new;
                 position: relative;
-                bottom: 225px;
+                bottom: 205px;
                 left: 205px;
                 border-radius: 2px;
                 font-size: 10px;
@@ -307,29 +333,29 @@
 
                 @include mobile-m-only {
                     left: 250px;
-                    bottom: 265px;
+                    bottom: 240px;
                     font-size: 12px;
                 }
 
                 @include mobile-l-only {
                     left: 290px;
-                    bottom: 290px;
+                    bottom: 265px;
                     font-size: 14px;
                 }
 
                 @include tablette-only {
                     left: 250px;
-                    bottom: 265px;
+                    bottom: 245px;
                     font-size: 16px;
                 }
                 @include desktop-only {
                     left: 160px;
-                    bottom: 210px;
+                    bottom: 190px;
                     font-size: 10px;
                 }
                 @include desktop-L-only {
                     left: 230px;
-                    bottom: 230px;
+                    bottom: 210px;
                     font-size: 12px;
                 }
                 
@@ -339,23 +365,38 @@
 }
 
 // REMPLISSAGE COEUR
-.colored-heart{
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 400;
-    color: black;
-    transform-origin: 50% 100%;
-    transition: all .2s;
-    &:hover{
-        font-weight: 900;
-        color: red;
-        
-    }
-}
+// .colored-heart{
+//         //Emplecement du coeur
+//         display: inline-block;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         font-style: normal;
+//         font-variant: normal;
+//         text-rendering: auto;
+//         -webkit-font-smoothing: antialiased;
+//         font-family: "Font Awesome Free 5";
+//         font-weight: 400;
+//         z-index: 0;
+//         background-color: white;
+//         &::after{
+//             content: "\f004";
+//             display: inline-block;
+//             position: absolute;
+//             z-index: 1;
+//             font-weight: 900;
+//             transform: scale(0);
+//             transition: 1s ease;
+//             background: -webkit-linear-gradient(top, red 30%, blue 70%);
+//             background-clip: text;
+//             -webkit-background-clip: text;
+//             color: transparent;
+//         }
+//     &:hover::after{
+//         transform: scale(1);
+//     }
+// }
     
     
     

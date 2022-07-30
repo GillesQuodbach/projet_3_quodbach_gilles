@@ -661,6 +661,7 @@ body {
 }
 .explore__btn:hover {
   background: linear-gradient(#fface8, #ae80e5);
+  box-shadow: 0px 5px 5px rgb(102, 101, 101);
 }
 @media screen and (min-width: 375px) {
   .explore__btn {
@@ -1110,6 +1111,17 @@ a:visited {
   margin: 0;
   padding: 0;
   padding-right: 20px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: antialiased;
+  z-index: 1000;
+  font-weight: 400;
+  background-color: #f6f6f6;
 }
 @media screen and (min-width: 375px) {
   .restaurant-title__heart {
@@ -1126,6 +1138,25 @@ a:visited {
     font-size: 32px;
     padding-right: 20px;
   }
+}
+
+.restaurants-title__heart::after {
+  content: "\f004";
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  z-index: 1111111;
+  font-weight: 900;
+  transform: scale(0);
+  transition: transform 1s ease;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background: linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurants-title__heart:hover::after {
+  transform: scale(1.05);
 }
 
 .menu-complete-part {
@@ -1654,7 +1685,7 @@ a:visited {
   width: 100%;
   background-color: white;
   margin: 0;
-  height: 60px;
+  height: 55px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1663,12 +1694,12 @@ a:visited {
 }
 @media screen and (min-width: 375px) {
   .restaurants__cards__figcaption {
-    height: 70px;
+    height: 65px;
   }
 }
 @media screen and (min-width: 425px) {
   .restaurants__cards__figcaption {
-    height: 70px;
+    height: 65px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1745,15 +1776,40 @@ a:visited {
   }
 }
 .restaurants__cards__figcaption__heart {
-  display: block;
+  width: min-content;
   margin: 0;
   padding: 0;
-  position: relative;
   left: 245px;
   bottom: 45px;
   font-size: 18px;
-  width: min-content;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: antialiased;
   z-index: 1000;
+  font-weight: 400;
+  background-color: white;
+}
+.restaurants__cards__figcaption__heart::after {
+  content: "\f004";
+  display: inline-block;
+  position: absolute;
+  z-index: 1111111111;
+  font-weight: 900;
+  transform: scale(0);
+  transition: transform 1s ease;
+  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background: linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurants__cards__figcaption__heart:hover::after {
+  transform: scale(1.05);
 }
 @media screen and (min-width: 375px) {
   .restaurants__cards__figcaption__heart {
@@ -1803,7 +1859,7 @@ a:visited {
   color: #4cb49b;
   background-color: #99e2d0;
   position: relative;
-  bottom: 225px;
+  bottom: 205px;
   left: 205px;
   border-radius: 2px;
   font-size: 10px;
@@ -1812,54 +1868,37 @@ a:visited {
 @media screen and (min-width: 375px) {
   .restaurants__cards__figcaption__new {
     left: 250px;
-    bottom: 265px;
+    bottom: 240px;
     font-size: 12px;
   }
 }
 @media screen and (min-width: 425px) {
   .restaurants__cards__figcaption__new {
     left: 290px;
-    bottom: 290px;
+    bottom: 265px;
     font-size: 14px;
   }
 }
 @media screen and (min-width: 768px) {
   .restaurants__cards__figcaption__new {
     left: 250px;
-    bottom: 265px;
+    bottom: 245px;
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1024px) {
   .restaurants__cards__figcaption__new {
     left: 160px;
-    bottom: 210px;
+    bottom: 190px;
     font-size: 10px;
   }
 }
 @media screen and (min-width: 1440px) {
   .restaurants__cards__figcaption__new {
     left: 230px;
-    bottom: 230px;
+    bottom: 210px;
     font-size: 12px;
   }
-}
-
-.colored-heart {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  color: black;
-  transform-origin: 50% 100%;
-  transition: all 0.2s;
-}
-.colored-heart:hover {
-  font-weight: 900;
-  color: red;
 }
 
 .restaurants-image1 {
