@@ -182,9 +182,6 @@
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-    @include desktop-only{
-        
-    }
 }
 // PARTIE DU MENU TITRE (entree - plat - dessert)
 .menu-complete-part-title{
@@ -280,11 +277,10 @@
 @keyframes apparition {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
-    50%{
-        opacity: 1;
-        // transform: translateY(40px);
+    40%{
+        opacity: 0.5;
     }
     100%{
         opacity: 1;
@@ -293,15 +289,20 @@
     
 }
 .menu1{
-    animation: apparition 0.5s ease-out;
+    animation: apparition 0.2s ease-in;
 }
 .menu2{
-    animation: apparition 0.5s ease-out;
-    animation-delay: .2s;
+    animation: apparition 0.2s ease-in;
+    animation-delay: 150ms;
 }
 .menu3{
-    animation: apparition 0.5s ease-out;
-    animation-delay: .4s;
+    animation: apparition 0.2s ease-in;
+    animation-delay: 300ms;
+    
+}
+.menu4{
+    animation: apparition 0.2s ease;
+    animation-delay: 450ms;
     
 }
 

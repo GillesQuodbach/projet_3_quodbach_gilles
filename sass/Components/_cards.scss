@@ -299,7 +299,7 @@
                 color: $colour-font-new;
                 background-color: $colour-bcg-new;
                 position: relative;
-                bottom: 205px;
+                bottom: 225px;
                 left: 205px;
                 border-radius: 2px;
                 font-size: 10px;
@@ -307,29 +307,29 @@
 
                 @include mobile-m-only {
                     left: 250px;
-                    bottom: 240px;
+                    bottom: 265px;
                     font-size: 12px;
                 }
 
                 @include mobile-l-only {
                     left: 290px;
-                    bottom: 265px;
+                    bottom: 290px;
                     font-size: 14px;
                 }
 
                 @include tablette-only {
                     left: 250px;
-                    bottom: 245px;
+                    bottom: 265px;
                     font-size: 16px;
                 }
                 @include desktop-only {
-                    left: 145px;
-                    bottom: 195px;
-                    font-size: 12px;
+                    left: 160px;
+                    bottom: 210px;
+                    font-size: 10px;
                 }
                 @include desktop-L-only {
-                    left: 220px;
-                    bottom: 210px;
+                    left: 230px;
+                    bottom: 230px;
                     font-size: 12px;
                 }
                 
@@ -338,27 +338,28 @@
     }
 }
 
+// REMPLISSAGE COEUR
 .colored-heart{
-    z-index: 1111;
-    position: relative;
-    overflow: visible;
-    bottom: 63px;
-    background:-webkit-linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
-    background-clip:text ;
-    -webkit-background-clip:text ;
-    color: transparent;
-    transform: scaleY(1);
-    animation: heart-color 1s all;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    color: black;
+    transform-origin: 50% 100%;
+    transition: all .2s;
     &:hover{
-        @keyframes heart-color {
-            from{transform: scaleY(0);}
-            to{ transform: scaleY(1);}
-            
-        }
+        font-weight: 900;
+        color: red;
+        
     }
-    
-    
 }
+    
+    
+    
+
 // CADRAGE IMAGE CARDS
 
 // CARDS 1
