@@ -17,9 +17,9 @@ body {
     position: absolute;
     z-index: 9999;
     overflow: hidden;
-    background-color: #0b0b0b;
-    animation: spin-background 3s linear forwards;
-    animation-delay: 1;
+    background-color: #464545;
+    animation: spin-background 2s linear forwards;
+    animation-delay: .5s;
     
     
 }
@@ -27,24 +27,27 @@ body {
     position: absolute;
     width: 100px;
     height: 100px;
+    z-index: 111111111;
     border: 10px solid transparent;
     border-top-color: $colour-primary;
     border-radius: 50%;
-    animation: spinner1 3s linear forwards;
+    animation: spinner1 2s linear forwards;
 }   
 .spinner2{
     position: absolute;
     width: 100px;
     height: 100px;
+    z-index: 111111111;
     border: 10px solid transparent;
     border-bottom-color: $colour-secondary;
     border-radius: 50%;
-    animation: spinner2 3s linear forwards;
+    animation: spinner2 2s linear  forwards;
     }
 
 @keyframes spin-background{
-   0% {opacity: 0.9;}
-   50% {opacity: 0.6;}
+   0% {opacity: 1;}
+   50% {opacity: 0.9;}
+   99%{opacity: 0.9;}
    100%{opacity: 0; display: none;z-index: -10;}
 
 }
@@ -53,13 +56,13 @@ body {
     0% {transform: rotate(0deg); border-width: 10px;opacity: 1;}
     50% {transform: rotate(180deg); border-width: 1px;opacity: 1;}
     99% {transform: rotate(360deg); border-width: 10px;opacity: 1;}
-    100% {opacity: 0; display: none;z-index: -99999;}
+    100% { display: none;z-index: -99999;}
 }
 @keyframes spinner2{
     0% {transform: rotate(0deg); border-width: 1px;opacity: 1;}
     50% {transform: rotate(180deg); border-width: 10px;opacity: 1;}
     99% {transform: rotate(360deg); border-width: 1px;opacity: 1;}
-    100% {opacity: 0; display: none;z-index: -99999;}
+    100% { display: none;z-index: -99999;}
 }
 // !PARTIE ACCUEIL
 // Partie exploration

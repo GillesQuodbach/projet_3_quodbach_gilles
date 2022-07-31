@@ -501,37 +501,42 @@ body {
   position: absolute;
   z-index: 9999;
   overflow: hidden;
-  background-color: #0b0b0b;
-  animation: spin-background 3s linear forwards;
-  animation-delay: 1;
+  background-color: #464545;
+  animation: spin-background 2s linear forwards;
+  animation-delay: 0.5s;
 }
 
 .spinner1 {
   position: absolute;
   width: 100px;
   height: 100px;
+  z-index: 111111111;
   border: 10px solid transparent;
   border-top-color: #9356DC;
   border-radius: 50%;
-  animation: spinner1 3s linear forwards;
+  animation: spinner1 2s linear forwards;
 }
 
 .spinner2 {
   position: absolute;
   width: 100px;
   height: 100px;
+  z-index: 111111111;
   border: 10px solid transparent;
   border-bottom-color: #FF79DA;
   border-radius: 50%;
-  animation: spinner2 3s linear forwards;
+  animation: spinner2 2s linear forwards;
 }
 
 @keyframes spin-background {
   0% {
-    opacity: 0.9;
+    opacity: 1;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.9;
+  }
+  99% {
+    opacity: 0.9;
   }
   100% {
     opacity: 0;
@@ -556,7 +561,6 @@ body {
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
     z-index: -99999;
   }
@@ -578,7 +582,6 @@ body {
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
     z-index: -99999;
   }
@@ -660,7 +663,7 @@ body {
   margin-bottom: 20px;
 }
 .explore__btn:hover {
-  background: linear-gradient(#fface8, #ae80e5);
+  background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 5px 5px rgb(102, 101, 101);
 }
 @media screen and (min-width: 375px) {
@@ -1118,7 +1121,6 @@ a:visited {
   position: relative;
   font-style: normal;
   font-variant: normal;
-  text-rendering: antialiased;
   z-index: 1000;
   font-weight: 400;
   background-color: #f6f6f6;
@@ -1149,8 +1151,8 @@ a:visited {
   font-weight: 900;
   transform: scale(0);
   transition: transform 1s ease;
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  background: linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background: -webkit-linear-gradient(to top, #9356DC 30%, #FF79DA 70%);
+  background: linear-gradient(to top, #9356DC 30%, #FF79DA 70%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -1789,7 +1791,6 @@ a:visited {
   position: relative;
   font-style: normal;
   font-variant: normal;
-  text-rendering: antialiased;
   z-index: 1000;
   font-weight: 400;
   background-color: white;
@@ -1802,8 +1803,8 @@ a:visited {
   font-weight: 900;
   transform: scale(0);
   transition: transform 1s ease;
-  background: -webkit-linear-gradient(top, #9356DC 30%, #FF79DA 70%);
-  background: linear-gradient(top, #9356DC 30%, #FF79DA 70%);
+  background: -webkit-linear-gradient(to top, #9356DC 30%, #FF79DA 70%);
+  background: linear-gradient(to top, #9356DC 30%, #FF79DA 70%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -2046,24 +2047,29 @@ a:visited {
 .header-menu {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
   margin: 0;
   background-color: white;
 }
+@media screen and (min-width: 375px) {
+  .header-menu {
+    padding-bottom: 5px;
+  }
+}
 @media screen and (min-width: 768px) {
   .header-menu {
-    padding-bottom: 10px;
+    padding-bottom: 60px;
     height: 60px;
   }
 }
 @media screen and (min-width: 1024px) {
   .header-menu {
-    height: 70px;
+    height: 80px;
   }
 }
 @media screen and (min-width: 1440px) {
   .header-menu {
-    height: 130px;
+    height: 80px;
   }
 }
 .header-menu__h1 {

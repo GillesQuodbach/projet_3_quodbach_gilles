@@ -168,7 +168,6 @@
         position: relative;
         font-style: normal;
         font-variant: normal;
-        text-rendering: antialiased;
         z-index: 1000;
         font-weight: 400;
         background-color: #f6f6f6;
@@ -196,8 +195,8 @@
             font-weight: 900;
             transform: scale(0);
             transition: transform 1s ease;
-            background: -webkit-linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
-                    background: linear-gradient(top, $colour-primary 30%, $colour-secondary 70%);
+            background: -webkit-linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
+                    background: linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
                     background-clip:text;
                     -webkit-background-clip: text;
                     color: transparent;
