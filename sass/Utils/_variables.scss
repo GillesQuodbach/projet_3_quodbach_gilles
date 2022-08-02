@@ -1,3 +1,5 @@
+// COULEURS
+
 $colour-primary: #9356DC;
 $light-colour-primary: lighten($colour-primary, 5%);
 $colour-secondary: #FF79DA;
@@ -12,7 +14,7 @@ $radius-figcaption: 0px 0px 15px 15px;
 $shadows:0px 2px 5px rgb(218, 213, 213);
 $gradient-colour: linear-gradient($light-colour-secondary, $light-colour-primary);
 
-
+// BREAKPOINTS
 $breakpoints:(
     mobile-s: 320px,
     mobile-m: 375px,
@@ -22,3 +24,7 @@ $breakpoints:(
     desktop-L:1440px,
     desktop-XL:1441px
 );
+
+// ANIMATION
+$animation-duration:1s;
+$animation-count:4;
