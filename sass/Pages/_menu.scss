@@ -1,7 +1,7 @@
 .menu-page{
     width: 100%;  
-    @include desktop-L-only{
-        width: 1025px;
+    @include desktop-XL-only{
+        width: 1440px;
         margin: auto;
     }
 }
@@ -27,6 +27,85 @@
         z-index: -1;
     }
 }
+
+// POSITION IMAGE MENU
+// A la française
+.image1{
+        object-position: 0px 10px;
+    @include mobile-m-only{
+        object-position: 0px 0px;
+    }
+    @include mobile-l-only{
+        object-position: 0px 5px;
+    }
+    @include tablette-only{
+        object-position: 0px 40px;
+    }
+    @include desktop-only{
+        object-position: 0px 55px;
+    }
+    @include desktop-L-only{
+        object-position: 0px -170px;
+    }
+}
+// La note enchantée
+.image2{
+    object-position: 0px -90px;
+    @include mobile-m-only{
+        object-position: 0px -115px;
+    }
+    @include mobile-l-only{
+        object-position: 0px -125px;
+    }
+    @include tablette-only{
+        object-position: 0px -190px;
+    }
+    @include desktop-only{
+        object-position: 0px -260px;
+    }
+    @include desktop-L-only{
+        object-position: 0px -600px;
+    }
+}
+// La palette du gout
+.image3{
+    object-position: 0px 10px;
+    @include mobile-m-only{
+        object-position: 0px -5px;
+    }
+    @include mobile-l-only{
+        object-position: 0px 0px;
+    }
+    @include tablette-only{
+        object-position: 0px 35px;
+    }
+    @include desktop-only{
+        object-position: 0px 45px;
+    }
+    @include desktop-L-only{
+        object-position: 0px -180px;
+    }
+}
+// Le délice des sens
+.image4{
+    object-position: 0px 5px;
+    @include mobile-m-only{
+        object-position: 0px -5px;
+    }
+    @include mobile-l-only{
+        object-position: 0px 5px;
+    }
+    @include tablette-only{
+        object-position: 0px 30px;
+    }
+    @include desktop-only{
+        object-position: 0px 40px;
+    }
+    @include desktop-L-only{
+        object-position: 0px -190px;
+    }
+}
+
 .menu-complete{
     text-align: center;
     background-color: #f6f6f6;
@@ -59,18 +138,18 @@
         font-family: 'Shrikhand', cursive;
         margin: 0;
         @include mobile-m-only{
-            font-size: 28px;
+            font-size: 26px;
        }
        @include mobile-l-only{
-        font-size: 32px;
+        font-size: 28px;
         }
         @include tablette-only{
-            font-size: 56px;
+            font-size: 32px;
             padding-left: 20px;
             padding-right: 20px;
         }
         @include desktop-only{
-            font-size: 70px;
+            font-size: 32px;
             padding-left: 20px;
             padding-right: 20px;
             padding-top: 0px;
@@ -82,26 +161,54 @@
         margin: 0;
         padding: 0;
         padding-right: 20px;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-style: normal;
+        font-variant: normal;
+        z-index: 1000;
+        font-weight: 400;
+        background-color: #f6f6f6;
+        
+
         @include mobile-m-only{
-            font-size: 24px;
+            font-size: 26px;
        }
        @include mobile-l-only{
-        font-size: 32px;
+        font-size: 26px;
+       }
         @include tablette-only{
-            font-size: 56px;
+            font-size: 32px;
             padding-right: 20px;
-        }
-        @include desktop-only{
-            font-size: 70px;
-            padding-right: 20px;
-            padding-top: 0px;
         }
    }
     }
-}
+    .restaurants-title__heart{
+        &::after{
+            content: "\f004";
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            z-index: 1111111;
+            font-weight: 900;
+            transform: scale(0);
+            transition: transform 1s ease;
+            background: -webkit-linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
+                    background: linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
+                    background-clip:text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+            }
+            &:hover::after{
+                transform: scale(1.05);
+            }
+    }
 
-// PARTIE DU MENU (entree - plat - dessert)
+// PARTIE DU MENU ()
 .menu-complete-part{
+    width: 100%;
     text-align: center;
     padding-bottom: 20px;
     display: flex;
@@ -125,19 +232,19 @@
         font-size: 18px;
     }
     @include tablette-only{
-        font-size: 36px;
-        margin: auto;
-        width: min-content;
-        border-bottom: 4px solid $colour-tertiary; 
-        margin-bottom: 30px;  
+        font-size: 20px;
+        margin-bottom: 30px;
+        margin-top: 20px;  
     }
     @include desktop-only{
-        font-size: 40px;
-        margin: auto;
-        width: min-content;
-        border-bottom: 4px solid $colour-tertiary; 
-        margin-bottom: 30px;
-        text-align: center;  
+        font-size: 20px;
+        margin-left: 25px;
+        margin-bottom: 30px; 
+    }
+    @include desktop-L-only{
+        font-size: 20px;
+        margin-left: 30px;
+        margin-bottom: 30px; 
     }
     &:after{
         content: "";
@@ -147,8 +254,14 @@
         bottom: -5px;
         left: 0;
         border-bottom: 4px solid $colour-tertiary;
+        @include tablette-only{ 
+            width: 7%;
+        }
         @include desktop-only{
-            display: none; 
+            width: 5%; 
+        }
+        @include desktop-L-only{
+            width: 4%; 
         }
     }
     
@@ -156,14 +269,32 @@
 }
 
 // BOUTON CHOIX PLATS +ANIMATION
-
+.menu-box{
+    @include desktop-only{
+    display: flex;
+    justify-content: space-evenly;
+    }
+}
 .menus{
     display: flex;
     width: 100%;
+    height: 55px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0px 0px 5px rgb(198, 195, 195);
+    box-shadow: 0px 0px 15px rgb(226, 223, 223);
     margin-bottom: 15px;
+    @include mobile-m-only{
+        height: 60px;
+    }
+    @include mobile-l-only{
+        height: 65px;
+    }
+    @include tablette-only{
+        height: 85px;
+    }
+    @include desktop-only{
+        width: 30%;
+    }
     
     // APPARITION
     &:hover > .box{
@@ -175,25 +306,34 @@
 }
 // !KEYFRAMES
 @keyframes apparition {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(20px);
     }
-    to{
+    40%{
+        opacity: 0.5;
+    }
+    100%{
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
+    
 }
 .menu1{
-    animation: apparition 0.8s ease-out;
+    animation: apparition 0.2s ease-in;
 }
 .menu2{
-    animation: apparition 0.8s ease-out;
-    animation-delay: 1s;
+    animation: apparition 0.2s ease-in;
+    animation-delay: 150ms;
 }
 .menu3{
-    animation: apparition 0.8s ease-out;
-    animation-delay: 2s;
+    animation: apparition 0.2s ease-in;
+    animation-delay: 300ms;
+    
+}
+.menu4{
+    animation: apparition 0.2s ease;
+    animation-delay: 450ms;
     
 }
 
@@ -223,10 +363,11 @@
             font-size: 18px;
         }
         @include tablette-only{
-            font-size: 36px;
+            font-size: 20px;
+            margin-top: 15px;
         }
         @include desktop-only{
-            font-size: 40px;
+            font-size: 20px;
         }
     
     }
@@ -245,15 +386,17 @@
             font-size: 16px;
         }
         @include tablette-only{
-            font-size: 30px;
+            font-size: 18px;
+            margin: 0;
+            margin-top: 10px;
         }
         @include desktop-only{
-            font-size: 32px;
+            font-size: 18px;
         }
     }
 }
 .price{
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
     margin-bottom: 10px;
     width: 16%;
@@ -261,19 +404,29 @@
     &__howmany{
         font-weight: 600;
         margin: 0;
-        text-align: left;   
+        text-align: left; 
+        @include tablette-only{
+            text-align: right;
+            margin-right: 30px;
+            margin-bottom: 5px;
+        } 
+        @include tablette-only{
+            text-align: right;
+            margin-right: 30px;
+            margin-bottom: 5px;
+        } 
     }
     @include mobile-m-only{
-        font-size: 17px;
+        font-size: 14px;
     }
     @include mobile-l-only{
-        font-size: 19px;
+        font-size: 16px;
     }
     @include tablette-only{
-        font-size: 36px;
+        font-size: 18px;
     }
     @include desktop-only{
-        font-size: 40px;
+        font-size: 20px;
         
     }
 }

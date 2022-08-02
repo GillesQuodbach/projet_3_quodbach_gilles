@@ -7,13 +7,70 @@ body {
         margin: auto;
     }
 }
+.spinner-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: #464545;
+    animation: spin-background 2s linear forwards;
+    animation-delay: .5s;
+    
+    
+}
+.spinner1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 111111111;
+    border: 10px solid transparent;
+    border-top-color: $colour-primary;
+    border-radius: 50%;
+    animation: spinner1 2s linear forwards;
+}   
+.spinner2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 111111111;
+    border: 10px solid transparent;
+    border-bottom-color: $colour-secondary;
+    border-radius: 50%;
+    animation: spinner2 2s linear  forwards;
+    }
 
+@keyframes spin-background{
+   0% {opacity: 1;}
+   50% {opacity: 0.9;}
+   99%{opacity: 0.9;}
+   100%{opacity: 0; display: none;z-index: -10;}
+
+}
+
+@keyframes spinner1{
+    0% {transform: rotate(0deg); border-width: 10px;opacity: 1;}
+    50% {transform: rotate(180deg); border-width: 1px;opacity: 1;}
+    99% {transform: rotate(360deg); border-width: 10px;opacity: 1;}
+    100% { display: none;z-index: -99999;}
+}
+@keyframes spinner2{
+    0% {transform: rotate(0deg); border-width: 1px;opacity: 1;}
+    50% {transform: rotate(180deg); border-width: 10px;opacity: 1;}
+    99% {transform: rotate(360deg); border-width: 1px;opacity: 1;}
+    100% { display: none;z-index: -99999;}
+}
 // !PARTIE ACCUEIL
 // Partie exploration
 .explore {
     padding-top: 10px;
     padding-bottom: 40px;
     text-align: center;
+    background-color: #eaeaea;
 
     &__h2 {
         font-size: 22px;
@@ -22,7 +79,7 @@ body {
         padding-right: 30px;
 
         @include mobile-m-only {
-            font-size: 28px;
+            font-size: 27px;
         }
 
         @include mobile-l-only {
@@ -30,7 +87,7 @@ body {
         }
 
         @include tablette-only {
-            font-size: 40px;
+            font-size: 22px;
             margin-bottom: 0;
             margin-top: 10px;
         }
@@ -40,7 +97,7 @@ body {
         font-weight: 300;
 
         @include mobile-m-only {
-            font-size: 18px;
+            font-size: 17px;
         }
 
         @include mobile-l-only {
@@ -48,7 +105,7 @@ body {
         }
 
         @include tablette-only {
-            font-size: 24px;
+            font-size: 16px;
             margin-top: 5px;
         }
     }
@@ -68,34 +125,53 @@ body {
     &__btn {
         // Bouton partie explorer/commander
         margin: auto;
-        width: 63%;
+        width: 55%;
         height: 50px;
-        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 25px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 500;
         color: white;
         background: linear-gradient($colour-secondary, $colour-primary);
         border: none;
         box-shadow: 0px 5px 5px rgb(218, 213, 213);
-        margin-top: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        &:hover{
+            background: $gradient-colour;
+            box-shadow: 0px 5px 5px rgb(102, 101, 101);
+            
+        }
+        
 
         @include mobile-m-only {
-            font-size: 16px;
+            font-size: 15px;
+            margin-top: 50px;
+            margin-bottom: 30px;
         }
 
         @include mobile-l-only {
-            font-size: 18px;
+            font-size: 17px;
+            margin-top: 50px;
+            margin-bottom: 40px;
         }
 
         @include tablette-only {
-            font-size: 30px;
+            font-size: 20px;
             height: 60px;
             line-height: 60px;
+            width: 35%;
+        }
+        @include desktop-only {
+            width: 30%;
+        }
+        @include desktop-XL-only {
+            width: 25%;
         }
     }
 }
-
 //PARTIE FONCTIONNEMENT
 .functioning {
     margin-top: 30px;
@@ -110,37 +186,47 @@ body {
 
     @include desktop-only {
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
-        margin-top: 0;
         justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
     }
-
     &__h2 {
         //Titre FONCTIONNEMENT
         text-align: left;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 700;
         margin-bottom: 20px;
+        position: relative;
+        right: 10px;
 
         @include mobile-m-only {
-            font-size: 22px;
+            font-size: 21px;
         }
 
         @include mobile-l-only {
-            font-size: 26px;
+            font-size: 23px;
         }
 
         @include tablette-only {
-            text-align: center;
-            font-size: 36px;
-            margin-top: 0;
+            
+            font-size: 22px;
+            margin-top: 30px;
         }
 
-        @include desktop-only {
-            text-align: center;
-            width: 100%;
-            font-size: 40px;
-            margin-top: 0;
+        @include desktop-only {  
+            margin-right: auto;
+            // margin-right: 800px;
+            flex-basis: 100%;
+            margin: 0%;
+            left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        @include desktop-L-only{
+
         }
 
     }
@@ -150,7 +236,7 @@ body {
         background-color: $colour-fonction-btn;
         margin-bottom: 20px;
         width: 100%;
-        height: 50px;
+        min-height: 50px;
         line-height: 50px;
         border-radius: 10px;
         border: none;
@@ -168,20 +254,18 @@ body {
         }
 
         @include tablette-only {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
             height: 70px;
             line-height: 70px;
-            font-size: 30px;
+            font-size: 16px;
         }
 
         @include desktop-only {
-            display: flex;
-            flex-direction: column;
-            min-width: 300px;
-            align-items: center;
-            height: fit-content;
-            margin: 0;
-            padding: 0;
-            font-size: 20px;
+            min-width: 280px;
+            margin: 10px 10px;
+            
         }
         @include desktop-L-only {
             min-width: 400px;
@@ -202,18 +286,18 @@ body {
         font-size: 14px;
 
         @include mobile-m-only {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         @include mobile-l-only {
-            font-size: 18px;
+            font-size: 14px;
         }
 
         @include desktop-only {
             margin: 0;
             margin-top: 20px;
             padding: 0;
-            font-size: 50px;
+            font-size: 16px;
         }
     }
 
@@ -248,18 +332,22 @@ body {
             width: 30px;
             height: 30px;
             line-height: 30px;
-            margin-right: 30px;
+            margin-right: 10px;
         }
 
         @include desktop-only {
-            font-size: 30px;
             width: 30px;
             height: 30px;
             line-height: 30px;
             margin: 0;
             margin: auto;
-            right: 0;
+            right: 15px;
             margin-top: 20px;
+        }
+    }
+    &__text{
+        @include tablette-only{
+            margin-left: 10px;
         }
     }
 }
