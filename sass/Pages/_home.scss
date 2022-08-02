@@ -1,0 +1,361 @@
+body {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    @include desktop-XL-only{
+        width: 1440px;
+        margin: auto;
+    }
+}
+.spinner-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: #464545;
+    animation: spin-background 2s linear forwards;
+    animation-delay: .5s;
+    
+    
+}
+.spinner1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 111111111;
+    border: 10px solid transparent;
+    border-top-color: $colour-primary;
+    border-radius: 50%;
+    animation: spinner1 2s linear forwards;
+}   
+.spinner2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 111111111;
+    border: 10px solid transparent;
+    border-bottom-color: $colour-secondary;
+    border-radius: 50%;
+    animation: spinner2 2s linear  forwards;
+    }
+
+@keyframes spin-background{
+   0% {opacity: 1;}
+   50% {opacity: 0.9;}
+   99%{opacity: 0.9;}
+   100%{opacity: 0; display: none;z-index: -10;}
+
+}
+
+@keyframes spinner1{
+    0% {transform: rotate(0deg); border-width: 10px;opacity: 1;}
+    50% {transform: rotate(180deg); border-width: 1px;opacity: 1;}
+    99% {transform: rotate(360deg); border-width: 10px;opacity: 1;}
+    100% { display: none;z-index: -99999;}
+}
+@keyframes spinner2{
+    0% {transform: rotate(0deg); border-width: 1px;opacity: 1;}
+    50% {transform: rotate(180deg); border-width: 10px;opacity: 1;}
+    99% {transform: rotate(360deg); border-width: 1px;opacity: 1;}
+    100% { display: none;z-index: -99999;}
+}
+// !PARTIE ACCUEIL
+// Partie exploration
+.explore {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #eaeaea;
+
+    &__h2 {
+        font-size: 22px;
+        font-weight: 700;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        @include mobile-m-only {
+            font-size: 27px;
+        }
+
+        @include mobile-l-only {
+            font-size: 32px;
+        }
+
+        @include tablette-only {
+            font-size: 22px;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+    &__h3 {
+        font-size: 16px;
+        font-weight: 300;
+
+        @include mobile-m-only {
+            font-size: 17px;
+        }
+
+        @include mobile-l-only {
+            font-size: 20px;
+        }
+
+        @include tablette-only {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+    }
+
+    &__title {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    &__text {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    &__btn {
+        // Bouton partie explorer/commander
+        margin: auto;
+        width: 55%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        font-size: 13px;
+        font-weight: 500;
+        color: white;
+        background: linear-gradient($colour-secondary, $colour-primary);
+        border: none;
+        box-shadow: 0px 5px 5px rgb(218, 213, 213);
+        margin-top: 40px;
+        margin-bottom: 20px;
+        &:hover{
+            background: $gradient-colour;
+            box-shadow: 0px 5px 5px rgb(102, 101, 101);
+            
+        }
+        
+
+        @include mobile-m-only {
+            font-size: 15px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        @include mobile-l-only {
+            font-size: 17px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        @include tablette-only {
+            font-size: 20px;
+            height: 60px;
+            line-height: 60px;
+            width: 35%;
+        }
+        @include desktop-only {
+            width: 30%;
+        }
+        @include desktop-XL-only {
+            width: 25%;
+        }
+    }
+}
+//PARTIE FONCTIONNEMENT
+.functioning {
+    margin-top: 30px;
+    padding-left: 29px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include tablette-only {
+        margin-top: 0;
+    }
+
+    @include desktop-only {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+    &__h2 {
+        //Titre FONCTIONNEMENT
+        text-align: left;
+        font-size: 19px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        position: relative;
+        right: 10px;
+
+        @include mobile-m-only {
+            font-size: 21px;
+        }
+
+        @include mobile-l-only {
+            font-size: 23px;
+        }
+
+        @include tablette-only {
+            
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        @include desktop-only {  
+            margin-right: auto;
+            // margin-right: 800px;
+            flex-basis: 100%;
+            margin: 0%;
+            left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        @include desktop-L-only{
+
+        }
+
+    }
+
+    &__btn {
+        //BOUTON FONCTIONNEMENT
+        background-color: $colour-fonction-btn;
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 50px;
+        line-height: 50px;
+        border-radius: 10px;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+        box-shadow: $shadows;
+        text-align: left;
+
+        @include mobile-m-only {
+            font-size: 16px;
+        }
+
+        @include mobile-l-only {
+            font-size: 18px;
+        }
+
+        @include tablette-only {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 70px;
+            line-height: 70px;
+            font-size: 16px;
+        }
+
+        @include desktop-only {
+            min-width: 280px;
+            margin: 10px 10px;
+            
+        }
+        @include desktop-L-only {
+            min-width: 400px;
+        }
+        &:hover {
+            background-color: $background-hover;
+
+            &:hover i {
+                color: $colour-primary;
+            }
+        }
+    }
+
+    &__icon {
+        //ICON FONTAWESOME
+        margin-left: 5px;
+        margin-right: 15px;
+        font-size: 14px;
+
+        @include mobile-m-only {
+            font-size: 14px;
+        }
+
+        @include mobile-l-only {
+            font-size: 14px;
+        }
+
+        @include desktop-only {
+            margin: 0;
+            margin-top: 20px;
+            padding: 0;
+            font-size: 16px;
+        }
+    }
+
+    &__number {
+        //NUMERO
+        display: inline-block;
+        position: relative;
+        right: 10px;
+        border: 1px solid black;
+        width: 18px;
+        height: 18px;
+        line-height: 19px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: $colour-primary;
+        color: white;
+        border: none;
+
+        @include mobile-m-only {
+            width: 20px;
+            height: 20px;
+            line-height: 21px;
+        }
+
+        @include mobile-l-only {
+            width: 22px;
+            height: 22px;
+            line-height: 23px;
+        }
+
+        @include tablette-only {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+
+        @include desktop-only {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0;
+            margin: auto;
+            right: 15px;
+            margin-top: 20px;
+        }
+    }
+    &__text{
+        @include tablette-only{
+            margin-left: 10px;
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+        color: black;
+    }
+}

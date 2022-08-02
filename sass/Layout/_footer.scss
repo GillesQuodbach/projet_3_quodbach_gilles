@@ -1,0 +1,84 @@
+footer{
+    background-color: #353535;
+    color: white;
+    padding-top: 15px;
+    padding-left: 20px;  
+    padding-bottom: 30px;  
+    @include desktop-only{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    @include desktop-L-only{
+        max-width: 100%;
+        margin: auto;
+    }
+    }
+
+// !TYPO FOOTER
+// Titre du FOOTER
+.footer-h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    @include mobile-m-only{
+        font-size: 20px;
+    }
+    @include mobile-l-only{
+        font-size: 22px;
+    }
+    @include tablette-only{
+        font-size: 22px;
+    }
+    @include desktop-only{
+        display: block;
+        flex-basis: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+.footer-h5{
+    font-size: 14px;
+    margin: 3px;
+    @include mobile-m-only{
+        font-size: 14px;
+    }
+    @include mobile-m-only{
+        font-size: 16px;
+    }
+    @include tablette-only{
+        font-size:16px;
+    }
+    @include desktop-only{
+        display: inline-block;
+        margin: auto;
+        flex-basis: 20%;
+    }
+}
+
+
+// Mise en forme des liens
+a {
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+
+.footer-contact {
+    color: white;
+    text-decoration: none;
+    &:visited{
+        color: white;
+        
+    }
+}
+
+
+
+
+

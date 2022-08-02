@@ -1,0 +1,24 @@
+$colour-primary: #9356DC;
+$light-colour-primary: lighten($colour-primary, 5%);
+$colour-secondary: #FF79DA;
+$light-colour-secondary: lighten($colour-secondary, 5%);
+$colour-tertiary: #99E2D0;
+$colour-fonction-btn:#F6F6F6;
+$background-hover:#f5edff;
+$colour-bcg-new:#99e2d0;
+$colour-font-new:#4cb49b;
+$radius-figure: 10px 10px 0px 0px;
+$radius-figcaption: 0px 0px 15px 15px;
+$shadows:0px 2px 5px rgb(218, 213, 213);
+$gradient-colour: linear-gradient($light-colour-secondary, $light-colour-primary);
+
+
+$breakpoints:(
+    mobile-s: 320px,
+    mobile-m: 375px,
+    mobile-l: 425px,
+    tablette:768px,
+    desktop:1024px,
+    desktop-L:1440px,
+    desktop-XL:1441px
+);

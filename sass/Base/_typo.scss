@@ -1,0 +1,25 @@
+// Tout le texte en roboto
+*{
+   font-family: 'Roboto', sans-serif;
+}
+// !PARTIE ACCUEIL
+// ?TYPO HEADER
+// Titre h1
+.header-h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+    @include mobile-m-only{
+        font-size: 32px;
+    }
+    @include mobile-l-only{
+        font-size: 34px;
+    }
+    @include tablette-only {
+        font-size: 50px;
+        }
+}
+
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "projet_3_quodbach_gilles",
+  "version": "1.0.0",
+  "description": "Integration MobileFirst OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./public/styles/style.css --style expanded",
+    "prefix": "postcss ./public/styles/style.css --use autoprefixer -d ./public/styles/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GillesQuodbach/projet_3_quodbach_gilles.git"
+  },
+  "author": "Gilles QUODBACH",
+  "license": "ISC",
+  "browserslist":"last 4 versions",
+  "bugs": {
+    "url": "https://github.com/GillesQuodbach/projet_3_quodbach_gilles/issues"
+  },
+  "homepage": "https://github.com/GillesQuodbach/projet_3_quodbach_gilles#readme"
+}

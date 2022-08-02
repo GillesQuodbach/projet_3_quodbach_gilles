@@ -1,0 +1,482 @@
+// CONTAINER <a> DES CARDES
+.restaurant-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+}
+
+// PARTIE AVEC LES CARDS
+.restaurants {
+    background-color: #f6f6f6;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include mobile-m-only{
+        gap: 20px;
+    }@include mobile-l-only{
+        gap: 20px;
+    }
+    @include tablette-only {
+        padding-bottom: 20px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+        height: 600px;
+    }
+    @include desktop-only {
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 250px;
+    }
+    @include desktop-L-only {
+        height: 280px;
+        
+        
+    }
+    
+    
+    &__h2 {
+        text-align: left;
+        font-size: 19px;
+        font-weight: 700;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @include mobile-m-only {
+            font-size: 22px;
+            padding-top: 10px;
+            padding-bottom: 0px;
+        }
+
+        @include mobile-l-only {
+            font-size: 23px;
+            
+        }
+
+        @include tablette-only {
+            font-size: 22px;
+            margin-bottom: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        @include desktop-only {
+            font-size: 22px;
+            margin-bottom: 10px;
+            padding: 0;
+            margin-right: 0px;
+            flex-basis: 100%;
+            
+        }
+        @include desktop-L-only {
+            font-size: 22px;
+        }
+        
+    }
+    &__cards { // LES CARDS
+        margin: 0;
+        min-width: 280px;
+        min-height: 205px;
+        max-height: 205px;
+        position: relative;
+        z-index: 1;
+
+        @include mobile-m-only {
+            min-height: 235px;
+            max-height: 235px;
+        }
+
+        @include mobile-l-only {
+            min-height: 255px;
+            max-height: 255px;
+        }
+
+        @include tablette-only {
+            min-height: 225px;
+            max-height: 225px;
+            min-width: 349px;
+        }
+        @include desktop-only {
+            min-height: 300px;
+            max-height: 300px;
+            min-width: 230px;
+        }
+        @include desktop-L-only {
+            min-height: 300px;
+            min-width: 310px;
+        }
+        
+
+        &__images {
+            width: 100%;
+            min-height: 145px;
+            max-height: 145px;
+            object-fit: cover;
+            vertical-align: middle;
+            overflow: hidden;
+            border-radius: $radius-figure;
+            z-index: -1;
+
+            @include mobile-m-only {
+                min-height: 170px;
+                max-height: 170px;
+            }
+
+            @include mobile-l-only {
+                min-height: 190px;
+                max-height: 190px;
+            }
+
+            @include tablette-only {
+                min-height: 180px;
+                max-height: 180px;
+            }
+            @include desktop-only {
+                min-height: 130px;
+                max-height: 130px;
+                min-width: 100%; 
+            }
+            @include desktop-L-only {
+                min-height: 160px;
+                max-height: 160px;
+                min-width: 100%;
+            }
+
+        }
+
+        &__figcaption {
+            width: 100%;
+            background-color: white;
+            margin: 0;
+            height: 55px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            border-radius: $radius-figcaption;
+            z-index: 1;
+
+            @include mobile-m-only {
+                height: 65px;
+            }
+
+            @include mobile-l-only {
+                height: 65px;
+            }
+
+            @include tablette-only {
+                min-height: 65px;
+                max-height: 65px;
+        
+            }
+            @include desktop-only {
+                min-height: 60px;
+                max-height: 60px;
+                min-width: 100%;
+            }
+            @include desktop-L-only {
+                min-height: 70px;
+                max-height: 70px;
+                min-width: 100%;
+            }
+            
+
+            &__title {
+                // Nom du resto
+                width: 100%;
+                margin: 0;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                margin-left: 15px;
+                font-weight: 600;
+                font-size: 14px;
+
+                @include mobile-m-only {
+                    font-size: 16px;
+                }
+
+                @include mobile-l-only {
+                    font-size: 18px;
+                }
+
+                @include tablette-only {
+                    font-size: 16px;
+                }
+                @include desktop-only {
+                    font-size: 16px;
+                }
+                @include desktop-L-only {
+                    
+                }
+            }
+
+            &__place {
+                //Emplecement du resto
+                display: block;
+                width: 100%;
+                margin: 0;
+                margin-left: 15px;
+                padding-bottom: 15px;
+                font-weight: 400;
+                font-size: 12px;
+
+                @include mobile-m-only {
+                    font-size: 14px;
+                }
+
+                @include mobile-m-only {
+                    font-size: 16px;
+                }
+                @include desktop-only {
+                    font-size: 14px;
+                }
+                @include desktop-L-only {
+                    
+                }
+            }
+
+            &__heart {
+                //Emplacement du coeur
+                width: min-content;
+                margin: 0;
+                padding: 0;
+                left: 245px;
+                bottom: 45px;
+                font-size: 18px;
+                display: inline-block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                font-style: normal;
+                font-variant: normal;
+                z-index: 1000;
+                font-weight: 400;
+                background-color: white;
+                &::after{
+                    content: "\f004";
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 1111111111;
+                    font-weight: 900;
+                    transform: scale(0);
+                    transition: transform 1s ease;
+                    background: -webkit-linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
+                    background: linear-gradient(to top, $colour-primary 30%, $colour-secondary 70%);
+                    background-clip:text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+                &:hover::after{
+                    transform: scale(1.05);
+                }
+                
+
+                @include mobile-m-only {
+                    left: 285px;
+                    bottom: 55px;
+                    font-size: 22px;
+                }
+
+                @include mobile-l-only {
+                    left: 335px;
+                    bottom: 55px;
+                    font-size: 24px;
+                }
+
+                @include tablette-only {
+                    left: 290px;
+                    bottom: 55px;
+                    font-size: 20px;
+                    padding: 0;
+                    margin: 0;
+                }
+                @include desktop-only {
+                    left: 190px;
+                    bottom: 50px;
+                    font-size: 20px;
+                }
+                @include desktop-L-only {
+                    left: 250px;
+                    bottom: 55px;
+                    font-size: 22px;
+                }
+            }
+
+            &__new {
+                //Mise en forme box NOUVEAU
+                display: block;
+                margin: 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: fit-content;
+                color: $colour-font-new;
+                background-color: $colour-bcg-new;
+                position: relative;
+                bottom: 205px;
+                left: 205px;
+                border-radius: 2px;
+                font-size: 10px;
+                font-weight: 600;
+
+                @include mobile-m-only {
+                    left: 250px;
+                    bottom: 240px;
+                    font-size: 12px;
+                }
+
+                @include mobile-l-only {
+                    left: 290px;
+                    bottom: 265px;
+                    font-size: 14px;
+                }
+
+                @include tablette-only {
+                    left: 250px;
+                    bottom: 245px;
+                    font-size: 16px;
+                }
+                @include desktop-only {
+                    left: 160px;
+                    bottom: 190px;
+                    font-size: 10px;
+                }
+                @include desktop-L-only {
+                    left: 230px;
+                    bottom: 210px;
+                    font-size: 12px;
+                }
+                
+            }
+        }
+    }
+}
+
+// REMPLISSAGE COEUR
+// .colored-heart{
+//         //Emplecement du coeur
+//         display: inline-block;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         font-style: normal;
+//         font-variant: normal;
+//         text-rendering: auto;
+//         -webkit-font-smoothing: antialiased;
+//         font-family: "Font Awesome Free 5";
+//         font-weight: 400;
+//         z-index: 0;
+//         background-color: white;
+//         &::after{
+//             content: "\f004";
+//             display: inline-block;
+//             position: absolute;
+//             z-index: 1;
+//             font-weight: 900;
+//             transform: scale(0);
+//             transition: 1s ease;
+//             background: -webkit-linear-gradient(top, red 30%, blue 70%);
+//             background-clip: text;
+//             -webkit-background-clip: text;
+//             color: transparent;
+//         }
+//     &:hover::after{
+//         transform: scale(1);
+//     }
+// }
+    
+    
+    
+
+// CADRAGE IMAGE CARDS
+
+// CARDS 1
+.restaurants-image1{
+    object-position: 0px -40px;
+    @include mobile-m-only {
+        object-position: 0px -55px;
+    }
+    @include mobile-l-only {
+        object-position: 0px -65px;
+    }
+    @include tablette-only {
+        object-position: 0px -50px;
+    }
+    @include desktop-only {
+        object-position: 0px -20px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -25px;
+    }
+}
+// CARDS 2
+.restaurants-image2{
+    object-position: 0px -125px;
+    @include mobile-m-only {
+        object-position: 0px -150px;
+    }
+    @include mobile-l-only {
+        object-position: 0px -175px;
+    }
+    @include tablette-only {
+        object-position: 0px -160px;
+    }
+    @include desktop-only {
+        object-position: 0px -65px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -110px;
+    }
+}
+// CARDS 3
+.restaurants-image3{
+    object-position: 0px -40px;
+    @include mobile-m-only {
+        object-position: 0px -55px;
+    }
+    @include mobile-l-only {
+        object-position: 0px -55px;
+    }
+    @include tablette-only {
+        object-position: 0px -50px;
+    }
+    @include desktop-only {
+        object-position: 0px -15px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -55px;
+    }
+}
+
+// CARDS 4
+.restaurants-image4{
+    object-position: 0px -50px;
+    @include mobile-m-only {
+        object-position: 0px -55px;
+    }
+    @include mobile-l-only {
+        object-position: 0px -65px;
+    }
+    @include tablette-only {
+        object-position: 0px -30px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -30px;
+    }
+    @include desktop-L-only {
+        object-position: 0px -60px;
+    }
+    
+}
