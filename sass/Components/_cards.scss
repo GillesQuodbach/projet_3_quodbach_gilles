@@ -164,6 +164,7 @@
             flex-direction: column;
             border-radius: $radius-figcaption;
             z-index: 1;
+            box-shadow: $cards-shadows;
 
             @include mobile-m-only {
                 height: 65px;

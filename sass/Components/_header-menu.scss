@@ -1,25 +1,25 @@
 .header-menu{
         padding-left: 20px;
         padding-right: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
         margin: 0;
         background-color: white;
         @include mobile-m-only{
-            padding-bottom: 5px;
+            padding-bottom: 0px;
         }
         @include mobile-l-only{
             
         }
         @include tablette-only{
             
-            padding-bottom: 60px;
+            padding-bottom: 10px;
             height: 60px;
         }
         @include desktop-only{
             height: 80px;
         }
         @include desktop-L-only{
-            height:80px;
+            height:120px;
         }
         &__h1{
             font-size: 22px;
@@ -49,27 +49,37 @@
         &__arrow{
             position: relative;
             right: 130px;
-            top: 23px;
-            font-size: 20px;
+            top: 20px;
+            font-size: 18px;
             @include mobile-m-only{
-                font-size: 22px;
-                top: 25px;
-                right: 150px;
+                font-size: 18px;
+                top: 23px;
+                right: 155px;
             }
             @include mobile-l-only{
-                font-size: 24px;
+                font-size: 20px;
                 top: 25px;
-                right: 160px;
+                right: 180px;
             }
             @include tablette-only{
-                font-size: 40px;
-                top: 45px;
-                right: 300px;
+                font-size: 30px;
+                top: 40px;
+                right: 340px;
             }
             @include desktop-only{
-                font-size: 50px;
-                top: 55px;
-                right: 400px;
+                font-size: 40px;
+                top: 50px;
+                right: 440px;
+            }
+            @include desktop-L-only{
+                font-size: 40px;
+                top: 45px;
+                right: 630px;
+            }
+            @include desktop-XL-only{
+                font-size: 40px;
+                top: 50px;
+                right: 630px;
             }
         }
     }

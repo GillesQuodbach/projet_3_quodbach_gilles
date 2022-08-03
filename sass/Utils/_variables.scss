@@ -11,7 +11,9 @@ $colour-bcg-new:#99e2d0;
 $colour-font-new:#4cb49b;
 $radius-figure: 10px 10px 0px 0px;
 $radius-figcaption: 0px 0px 15px 15px;
-$shadows:0px 2px 5px rgb(218, 213, 213);
+$menu-shadows: 0px 0px 15px rgb(226, 223, 223);
+$cards-shadows: 0px 2px 5px rgb(218, 213, 213);
+$shadows: 0px 2px 5px rgb(218, 213, 213);
 $gradient-colour: linear-gradient($light-colour-secondary, $light-colour-primary);
 
 // BREAKPOINTS
@@ -27,4 +29,4 @@ $breakpoints:(
 
 // ANIMATION
 $animation-duration:1s;
-$animation-count:4;
+$animation-count:3;
