@@ -502,7 +502,7 @@ body {
   inset: 0;
   z-index: 9999;
   background-color: #464545;
-  opacity: 0.7;
+  opacity: 1;
   animation: spin-background 200ms 3s forwards;
 }
 
@@ -534,11 +534,8 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
   99% {
-    opacity: 0.3;
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -1049,6 +1046,12 @@ a:visited {
   padding-top: 10px;
   padding-bottom: 40px;
 }
+@media screen and (min-width: 1024px) {
+  .menu-complete {
+    padding-left: 0;
+    text-align: left;
+  }
+}
 
 .menu-complete:last-child {
   align-items: center;
@@ -1069,6 +1072,7 @@ a:visited {
   .restaurant-title {
     margin-top: 20px;
     margin-bottom: 20px;
+    justify-content: space-around;
   }
 }
 .restaurant-title__text {
@@ -1192,13 +1196,14 @@ a:visited {
 }
 @media screen and (min-width: 1024px) {
   .menu-complete-part-title {
+    left: 250px;
     font-size: 20px;
-    margin-left: 25px;
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
   .menu-complete-part-title {
+    left: 325px;
     font-size: 20px;
     margin-left: 30px;
     margin-bottom: 30px;
@@ -1220,19 +1225,21 @@ a:visited {
 }
 @media screen and (min-width: 1024px) {
   .menu-complete-part-title:after {
-    width: 5%;
+    width: 5.5%;
   }
 }
 @media screen and (min-width: 1440px) {
   .menu-complete-part-title:after {
-    width: 4%;
+    width: 3.5%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .menu-box {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -1262,7 +1269,7 @@ a:visited {
 }
 @media screen and (min-width: 1024px) {
   .menus {
-    width: 30%;
+    width: 50%;
   }
 }
 .menus:hover > .box {
@@ -1309,6 +1316,7 @@ a:visited {
   width: 10em;
   text-align: left;
   padding-left: 10px;
+  padding-right: -30px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1350,6 +1358,7 @@ a:visited {
   font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
+  padding-right: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1362,6 +1371,7 @@ a:visited {
 @media screen and (min-width: 425px) {
   .plate-name__complement {
     font-size: 16px;
+    padding-right: 30px;
   }
 }
 @media screen and (min-width: 768px) {
