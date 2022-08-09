@@ -306,7 +306,7 @@
         width: 50%;
     }
     
-    // APPARITION
+    // APPARITION CHECKBOX
     &:hover > .box{
         width: 4em;
         .check{
@@ -314,21 +314,7 @@
         }
     }
 }
-// !KEYFRAMES
-@keyframes apparition {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    40%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-    
-}
+
 .menu1{
     animation: apparition 1s ease-in;
 }
@@ -346,8 +332,21 @@
     animation-delay: 450ms;
     
 }
-
-
+// !KEYFRAMES
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    40%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
 .plate-name{
     flex-grow: 1;
     width: 10em;
