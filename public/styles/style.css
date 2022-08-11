@@ -739,9 +739,19 @@ body {
 @media screen and (min-width: 1024px) {
   .functioning__h2 {
     margin-right: auto;
-    flex-basis: 900px;
+    flex-basis: 990px;
     margin: 0%;
-    left: 20px;
+    left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .functioning__h2 {
+    margin-right: auto;
+    flex-basis: 1400px;
+    margin: 0%;
+    left: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
