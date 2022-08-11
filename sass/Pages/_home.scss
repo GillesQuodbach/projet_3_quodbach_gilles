@@ -218,18 +218,25 @@ body {
         }
 
         @include desktop-only {  
-            margin-right: auto;
-            flex-basis: 990px;
-            margin: 0%;
-            left: 5px;
+            
+            flex-basis: 100%;
+            margin: 0;
+            margin-left: 30px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
         @include desktop-L-only{
-            margin-right: auto;
-            flex-basis: 1400px;
-            margin: 0%;
-            left: 0px;
+            
+            flex-basis: 100%;
+            margin: 0;
+            margin-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        @include desktop-XL-only{
+            
+            flex-basis: 100%;
+            margin-left: 30px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
