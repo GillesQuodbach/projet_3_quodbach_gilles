@@ -7,6 +7,7 @@ body {
         margin: auto;
     }
 }
+// LOADER
 .spinner-container{
     
     width: 100%;
@@ -218,8 +219,9 @@ body {
 
         @include desktop-only {  
             margin-right: auto;
+            
             // margin-right: 800px;
-            flex-basis: 100%;
+            flex-basis: 900px;
             margin: 0%;
             left: 20px;
             margin-top: 20px;

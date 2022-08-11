@@ -362,44 +362,7 @@
             }
         }
     }
-}
-
-// REMPLISSAGE COEUR
-// .colored-heart{
-//         //Emplecement du coeur
-//         display: inline-block;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         position: relative;
-//         font-style: normal;
-//         font-variant: normal;
-//         text-rendering: auto;
-//         -webkit-font-smoothing: antialiased;
-//         font-family: "Font Awesome Free 5";
-//         font-weight: 400;
-//         z-index: 0;
-//         background-color: white;
-//         &::after{
-//             content: "\f004";
-//             display: inline-block;
-//             position: absolute;
-//             z-index: 1;
-//             font-weight: 900;
-//             transform: scale(0);
-//             transition: 1s ease;
-//             background: -webkit-linear-gradient(top, red 30%, blue 70%);
-//             background-clip: text;
-//             -webkit-background-clip: text;
-//             color: transparent;
-//         }
-//     &:hover::after{
-//         transform: scale(1);
-//     }
-// }
-    
-    
-    
+}   
 
 // CADRAGE IMAGE CARDS
 

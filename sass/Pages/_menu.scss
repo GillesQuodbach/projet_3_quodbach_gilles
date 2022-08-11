@@ -190,6 +190,7 @@
         }
    }
     }
+    // ANIMATION COEUR
     .restaurants-title__heart{
         &::after{
             content: "\f004";
@@ -253,6 +254,7 @@
         margin-left: 30px;
         margin-bottom: 30px; 
     }
+    // SOULIGNER EN VERT
     &:after{
         content: "";
         position: absolute;
@@ -314,7 +316,7 @@
         }
     }
 }
-
+// APPARTION DES PLATS
 .menu1{
     animation: apparition 1s ease-in;
 }
@@ -467,7 +469,7 @@
 }
 
 }
-// ANIMATION BOUTON CHOIX DU MENU
+
 
 
 // !POSITION IMAGE MENU
